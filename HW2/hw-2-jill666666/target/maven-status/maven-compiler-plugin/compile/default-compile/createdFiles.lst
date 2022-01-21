@@ -1,0 +1,12 @@
+wc/ReplicatedJoin$RepJoinMapper.class
+wc/ReduceSideJoin$Path2Reducer.class
+wc/Path2JoinTotal.class
+wc/Path2JoinTotal$Path2Mapper.class
+wc/Path2Join$Path2Mapper.class
+wc/Path2Join$Path2Reducer.class
+wc/ReduceSideJoin.class
+wc/ReplicatedJoin.class
+wc/Path2Join.class
+wc/Path2JoinTotal$Path2Reducer.class
+wc/ReduceSideJoin$InputMapper.class
+wc/ReduceSideJoin$Path2Mapper.class

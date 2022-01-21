@@ -1,0 +1,111 @@
+2021-10-09 00:08:25,856 INFO org.apache.hadoop.yarn.client.RMProxy (main): Connecting to ResourceManager at ip-172-31-26-120.ec2.internal/172.31.26.120:8032
+2021-10-09 00:08:26,144 INFO org.apache.hadoop.yarn.client.AHSProxy (main): Connecting to Application History server at ip-172-31-26-120.ec2.internal/172.31.26.120:10200
+2021-10-09 00:08:27,750 INFO org.apache.hadoop.mapreduce.JobResourceUploader (main): Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/hadoop/.staging/job_1633737959027_0001
+2021-10-09 00:08:28,759 INFO org.apache.hadoop.mapreduce.lib.input.FileInputFormat (main): Total input files to process : 1
+2021-10-09 00:08:28,772 INFO com.hadoop.compression.lzo.GPLNativeCodeLoader (main): Loaded native gpl library
+2021-10-09 00:08:28,774 INFO com.hadoop.compression.lzo.LzoCodec (main): Successfully loaded & initialized native-lzo library [hadoop-lzo rev 049362b7cf53ff5f739d6b1532457f2c6cd495e8]
+2021-10-09 00:08:29,093 INFO org.apache.hadoop.mapreduce.JobSubmitter (main): number of splits:20
+2021-10-09 00:08:29,650 INFO org.apache.hadoop.mapreduce.JobSubmitter (main): Submitting tokens for job: job_1633737959027_0001
+2021-10-09 00:08:29,652 INFO org.apache.hadoop.mapreduce.JobSubmitter (main): Executing with tokens: []
+2021-10-09 00:08:29,853 INFO org.apache.hadoop.conf.Configuration (main): resource-types.xml not found
+2021-10-09 00:08:29,853 INFO org.apache.hadoop.yarn.util.resource.ResourceUtils (main): Unable to find 'resource-types.xml'.
+2021-10-09 00:08:30,348 INFO org.apache.hadoop.yarn.client.api.impl.YarnClientImpl (main): Submitted application application_1633737959027_0001
+2021-10-09 00:08:30,431 INFO org.apache.hadoop.mapreduce.Job (main): The url to track the job: http://ip-172-31-26-120.ec2.internal:20888/proxy/application_1633737959027_0001/
+2021-10-09 00:08:30,432 INFO org.apache.hadoop.mapreduce.Job (main): Running job: job_1633737959027_0001
+2021-10-09 00:08:40,561 INFO org.apache.hadoop.mapreduce.Job (main): Job job_1633737959027_0001 running in uber mode : false
+2021-10-09 00:08:40,562 INFO org.apache.hadoop.mapreduce.Job (main):  map 0% reduce 0%
+2021-10-09 00:09:08,862 INFO org.apache.hadoop.mapreduce.Job (main):  map 3% reduce 0%
+2021-10-09 00:09:09,878 INFO org.apache.hadoop.mapreduce.Job (main):  map 11% reduce 0%
+2021-10-09 00:09:10,883 INFO org.apache.hadoop.mapreduce.Job (main):  map 31% reduce 0%
+2021-10-09 00:09:11,890 INFO org.apache.hadoop.mapreduce.Job (main):  map 37% reduce 0%
+2021-10-09 00:09:13,901 INFO org.apache.hadoop.mapreduce.Job (main):  map 40% reduce 0%
+2021-10-09 00:09:14,906 INFO org.apache.hadoop.mapreduce.Job (main):  map 42% reduce 0%
+2021-10-09 00:09:15,911 INFO org.apache.hadoop.mapreduce.Job (main):  map 44% reduce 0%
+2021-10-09 00:09:20,946 INFO org.apache.hadoop.mapreduce.Job (main):  map 51% reduce 0%
+2021-10-09 00:09:21,952 INFO org.apache.hadoop.mapreduce.Job (main):  map 58% reduce 0%
+2021-10-09 00:09:26,993 INFO org.apache.hadoop.mapreduce.Job (main):  map 68% reduce 0%
+2021-10-09 00:09:27,997 INFO org.apache.hadoop.mapreduce.Job (main):  map 74% reduce 0%
+2021-10-09 00:09:29,003 INFO org.apache.hadoop.mapreduce.Job (main):  map 76% reduce 0%
+2021-10-09 00:09:30,008 INFO org.apache.hadoop.mapreduce.Job (main):  map 81% reduce 2%
+2021-10-09 00:09:31,013 INFO org.apache.hadoop.mapreduce.Job (main):  map 95% reduce 3%
+2021-10-09 00:09:32,018 INFO org.apache.hadoop.mapreduce.Job (main):  map 100% reduce 3%
+2021-10-09 00:09:33,037 INFO org.apache.hadoop.mapreduce.Job (main):  map 100% reduce 8%
+2021-10-09 00:09:34,043 INFO org.apache.hadoop.mapreduce.Job (main):  map 100% reduce 13%
+2021-10-09 00:09:35,048 INFO org.apache.hadoop.mapreduce.Job (main):  map 100% reduce 31%
+2021-10-09 00:09:36,053 INFO org.apache.hadoop.mapreduce.Job (main):  map 100% reduce 53%
+2021-10-09 00:09:37,058 INFO org.apache.hadoop.mapreduce.Job (main):  map 100% reduce 60%
+2021-10-09 00:09:45,095 INFO org.apache.hadoop.mapreduce.Job (main):  map 100% reduce 73%
+2021-10-09 00:09:46,100 INFO org.apache.hadoop.mapreduce.Job (main):  map 100% reduce 87%
+2021-10-09 00:09:47,105 INFO org.apache.hadoop.mapreduce.Job (main):  map 100% reduce 100%
+2021-10-09 00:09:48,116 INFO org.apache.hadoop.mapreduce.Job (main): Job job_1633737959027_0001 completed successfully
+2021-10-09 00:09:48,207 INFO org.apache.hadoop.mapreduce.Job (main): Counters: 62
+	File System Counters
+		FILE: Number of bytes read=102432
+		FILE: Number of bytes written=8579172
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=2120
+		HDFS: Number of bytes written=0
+		HDFS: Number of read operations=20
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=0
+		HDFS: Number of bytes read erasure-coded=0
+		S3: Number of bytes read=1319440972
+		S3: Number of bytes written=14625334
+		S3: Number of read operations=0
+		S3: Number of large read operations=0
+		S3: Number of write operations=0
+	Job Counters 
+		Killed map tasks=2
+		Killed reduce tasks=1
+		Launched map tasks=20
+		Launched reduce tasks=15
+		Data-local map tasks=20
+		Total time spent by all maps in occupied slots (ms)=35635815
+		Total time spent by all reduces in occupied slots (ms)=25864650
+		Total time spent by all map tasks (ms)=791907
+		Total time spent by all reduce tasks (ms)=287385
+		Total vcore-milliseconds taken by all map tasks=791907
+		Total vcore-milliseconds taken by all reduce tasks=287385
+		Total megabyte-milliseconds taken by all map tasks=1140346080
+		Total megabyte-milliseconds taken by all reduce tasks=827668800
+	Map-Reduce Framework
+		Map input records=85331845
+		Map output records=19910
+		Map output bytes=197698
+		Map output materialized bytes=118343
+		Input split bytes=2120
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=2399
+		Reduce shuffle bytes=118343
+		Reduce input records=19910
+		Reduce output records=1605166
+		Spilled Records=39820
+		Shuffled Maps =300
+		Failed Shuffles=0
+		Merged Map outputs=300
+		GC time elapsed (ms)=26783
+		CPU time spent (ms)=327130
+		Physical memory (bytes) snapshot=23008817152
+		Virtual memory (bytes) snapshot=124633747456
+		Total committed heap usage (bytes)=21194866688
+		Peak Map Physical memory (bytes)=1019441152
+		Peak Map Virtual memory (bytes)=3069923328
+		Peak Reduce Physical memory (bytes)=545681408
+		Peak Reduce Virtual memory (bytes)=4338466816
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	counter
+		PATH2_CARDINALITY=1612730
+	File Input Format Counters 
+		Bytes Read=1319440972
+	File Output Format Counters 
+		Bytes Written=14625334
+2021-10-09 00:09:48,213 INFO wc.Path2Join (main): path2 cardinality: 1612730

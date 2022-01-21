@@ -1,0 +1,1487 @@
+sunho@Sunhos-MacBook-Pro hw-2-jill666666 % make local-repjoin
+mvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------------< cs6240:mr-demo >---------------------------
+[INFO] Building mr-demo 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from maven-default-http-blocker: http://0.0.0.0/net/minidev/json-smart/maven-metadata.xml
+[WARNING] Could not transfer metadata net.minidev:json-smart/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): transfer failed for http://0.0.0.0/net/minidev/json-smart/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ mr-demo ---
+[INFO] Deleting /Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ mr-demo ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ mr-demo ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 4 source files to /Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ mr-demo ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ mr-demo ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ mr-demo ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ mr-demo ---
+[INFO] Building jar: /Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/target/mr-demo-1.0.jar
+[INFO] 
+[INFO] --- maven-shade-plugin:3.1.1:shade (default) @ mr-demo ---
+[INFO] Replacing original artifact with shaded artifact.
+[INFO] Replacing /Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/target/mr-demo-1.0.jar with /Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/target/mr-demo-1.0-shaded.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.890 s
+[INFO] Finished at: 2021-10-08T22:36:24-04:00
+[INFO] ------------------------------------------------------------------------
+rm -rf path2*;
+rm -rf output*
+/Users/sunho/Dropbox/Boston/CS6240/tools/hadoop-2.9.1/bin/hadoop jar target/mr-demo-1.0.jar wc.ReplicatedJoin /Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/ output;
+2021-10-08 22:36:25,504 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2021-10-08 22:36:25,708 INFO impl.MetricsConfig: Loaded properties from hadoop-metrics2.properties
+2021-10-08 22:36:25,778 INFO impl.MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+2021-10-08 22:36:25,778 INFO impl.MetricsSystemImpl: JobTracker metrics system started
+2021-10-08 22:36:25,955 INFO input.FileInputFormat: Total input files to process : 1
+2021-10-08 22:36:26,020 INFO mapreduce.JobSubmitter: number of splits:40
+2021-10-08 22:36:26,140 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_local436953994_0001
+2021-10-08 22:36:26,140 INFO mapreduce.JobSubmitter: Executing with tokens: []
+2021-10-08 22:36:26,296 INFO mapreduce.Job: The url to track the job: http://localhost:8080/
+2021-10-08 22:36:26,297 INFO mapreduce.Job: Running job: job_local436953994_0001
+2021-10-08 22:36:26,298 INFO mapred.LocalJobRunner: OutputCommitter set in config null
+2021-10-08 22:36:26,307 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:36:26,307 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:36:26,308 INFO mapred.LocalJobRunner: OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+2021-10-08 22:36:26,376 INFO mapred.LocalJobRunner: Waiting for map tasks
+2021-10-08 22:36:26,376 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000000_0
+2021-10-08 22:36:26,399 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:36:26,399 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:36:26,406 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:36:26,406 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:36:26,409 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:0+33554432
+2021-10-08 22:36:27,303 INFO mapreduce.Job: Job job_local436953994_0001 running in uber mode : false
+2021-10-08 22:36:27,304 INFO mapreduce.Job:  map 0% reduce 0%
+2021-10-08 22:36:44,852 INFO mapred.LocalJobRunner: 
+2021-10-08 22:36:44,857 INFO mapred.Task: Task:attempt_local436953994_0001_m_000000_0 is done. And is in the process of committing
+2021-10-08 22:36:44,858 INFO mapred.LocalJobRunner: 
+2021-10-08 22:36:44,858 INFO mapred.Task: Task attempt_local436953994_0001_m_000000_0 is allowed to commit now
+2021-10-08 22:36:44,859 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000000_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:36:44,860 INFO mapred.LocalJobRunner: map
+2021-10-08 22:36:44,860 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000000_0' done.
+2021-10-08 22:36:44,865 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000000_0: Counters: 16
+	File System Counters
+		FILE: Number of bytes read=33584709
+		FILE: Number of bytes written=625380
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2218495
+		Map output records=2347
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=207
+		Total committed heap usage (bytes)=311427072
+	counter
+		NUM_OF_TRIANGLES=2347
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=30974
+2021-10-08 22:36:44,865 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000000_0
+2021-10-08 22:36:44,865 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000001_0
+2021-10-08 22:36:44,866 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:36:44,866 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:36:44,866 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:36:44,866 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:36:44,868 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:33554432+33554432
+2021-10-08 22:36:45,336 INFO mapreduce.Job:  map 100% reduce 0%
+2021-10-08 22:37:03,934 INFO mapred.LocalJobRunner: 
+2021-10-08 22:37:03,935 INFO mapred.Task: Task:attempt_local436953994_0001_m_000001_0 is done. And is in the process of committing
+2021-10-08 22:37:03,935 INFO mapred.LocalJobRunner: 
+2021-10-08 22:37:03,935 INFO mapred.Task: Task attempt_local436953994_0001_m_000001_0 is allowed to commit now
+2021-10-08 22:37:03,937 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000001_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:37:03,937 INFO mapred.LocalJobRunner: map
+2021-10-08 22:37:03,938 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000001_0' done.
+2021-10-08 22:37:03,938 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000001_0: Counters: 16
+	File System Counters
+		FILE: Number of bytes read=67147385
+		FILE: Number of bytes written=626963
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2169271
+		Map output records=124
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=190
+		Total committed heap usage (bytes)=326631424
+	counter
+		NUM_OF_TRIANGLES=124
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=1583
+2021-10-08 22:37:03,938 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000001_0
+2021-10-08 22:37:03,938 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000002_0
+2021-10-08 22:37:03,938 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:37:03,938 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:37:03,939 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:37:03,939 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:37:03,940 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:67108864+33554432
+2021-10-08 22:37:22,830 INFO mapred.LocalJobRunner: 
+2021-10-08 22:37:22,831 INFO mapred.Task: Task:attempt_local436953994_0001_m_000002_0 is done. And is in the process of committing
+2021-10-08 22:37:22,831 INFO mapred.LocalJobRunner: 
+2021-10-08 22:37:22,832 INFO mapred.Task: Task attempt_local436953994_0001_m_000002_0 is allowed to commit now
+2021-10-08 22:37:22,833 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000002_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:37:22,833 INFO mapred.LocalJobRunner: map
+2021-10-08 22:37:22,833 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000002_0' done.
+2021-10-08 22:37:22,834 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000002_0: Counters: 16
+	File System Counters
+		FILE: Number of bytes read=100710061
+		FILE: Number of bytes written=628896
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2155483
+		Map output records=157
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=185
+		Total committed heap usage (bytes)=311951360
+	counter
+		NUM_OF_TRIANGLES=157
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=1933
+2021-10-08 22:37:22,834 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000002_0
+2021-10-08 22:37:22,834 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000003_0
+2021-10-08 22:37:22,835 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:37:22,835 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:37:22,835 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:37:22,835 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:37:22,837 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:100663296+33554432
+2021-10-08 22:37:41,471 INFO mapred.LocalJobRunner: 
+2021-10-08 22:37:41,472 INFO mapred.Task: Task:attempt_local436953994_0001_m_000003_0 is done. And is in the process of committing
+2021-10-08 22:37:41,473 INFO mapred.LocalJobRunner: 
+2021-10-08 22:37:41,473 INFO mapred.Task: Task attempt_local436953994_0001_m_000003_0 is allowed to commit now
+2021-10-08 22:37:41,476 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000003_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:37:41,476 INFO mapred.LocalJobRunner: map
+2021-10-08 22:37:41,476 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000003_0' done.
+2021-10-08 22:37:41,477 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000003_0: Counters: 16
+	File System Counters
+		FILE: Number of bytes read=134272737
+		FILE: Number of bytes written=631778
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2153620
+		Map output records=221
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=184
+		Total committed heap usage (bytes)=345505792
+	counter
+		NUM_OF_TRIANGLES=221
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=2882
+2021-10-08 22:37:41,477 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000003_0
+2021-10-08 22:37:41,477 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000004_0
+2021-10-08 22:37:41,479 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:37:41,479 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:37:41,479 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:37:41,479 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:37:41,481 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:134217728+33554432
+2021-10-08 22:38:00,196 INFO mapred.LocalJobRunner: 
+2021-10-08 22:38:00,197 INFO mapred.Task: Task:attempt_local436953994_0001_m_000004_0 is done. And is in the process of committing
+2021-10-08 22:38:00,197 INFO mapred.LocalJobRunner: 
+2021-10-08 22:38:00,197 INFO mapred.Task: Task attempt_local436953994_0001_m_000004_0 is allowed to commit now
+2021-10-08 22:38:00,199 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000004_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:38:00,199 INFO mapred.LocalJobRunner: map
+2021-10-08 22:38:00,199 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000004_0' done.
+2021-10-08 22:38:00,200 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000004_0: Counters: 16
+	File System Counters
+		FILE: Number of bytes read=167835413
+		FILE: Number of bytes written=632376
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2151970
+		Map output records=53
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=189
+		Total committed heap usage (bytes)=306708480
+	counter
+		NUM_OF_TRIANGLES=53
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=598
+2021-10-08 22:38:00,200 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000004_0
+2021-10-08 22:38:00,200 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000005_0
+2021-10-08 22:38:00,201 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:38:00,201 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:38:00,201 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:38:00,201 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:38:00,202 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:167772160+33554432
+2021-10-08 22:38:18,086 INFO mapred.LocalJobRunner: 
+2021-10-08 22:38:18,086 INFO mapred.Task: Task:attempt_local436953994_0001_m_000005_0 is done. And is in the process of committing
+2021-10-08 22:38:18,087 INFO mapred.LocalJobRunner: 
+2021-10-08 22:38:18,087 INFO mapred.Task: Task attempt_local436953994_0001_m_000005_0 is allowed to commit now
+2021-10-08 22:38:18,088 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000005_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:38:18,088 INFO mapred.LocalJobRunner: map
+2021-10-08 22:38:18,088 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000005_0' done.
+2021-10-08 22:38:18,088 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000005_0: Counters: 16
+	File System Counters
+		FILE: Number of bytes read=201398089
+		FILE: Number of bytes written=633353
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2154511
+		Map output records=80
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=177
+		Total committed heap usage (bytes)=337117184
+	counter
+		NUM_OF_TRIANGLES=80
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=977
+2021-10-08 22:38:18,089 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000005_0
+2021-10-08 22:38:18,089 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000006_0
+2021-10-08 22:38:18,089 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:38:18,089 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:38:18,089 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:38:18,089 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:38:18,090 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:201326592+33554432
+2021-10-08 22:38:35,553 INFO mapred.LocalJobRunner: 
+2021-10-08 22:38:35,553 INFO mapred.Task: Task:attempt_local436953994_0001_m_000006_0 is done. And is in the process of committing
+2021-10-08 22:38:35,554 INFO mapred.LocalJobRunner: 
+2021-10-08 22:38:35,554 INFO mapred.Task: Task attempt_local436953994_0001_m_000006_0 is allowed to commit now
+2021-10-08 22:38:35,555 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000006_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:38:35,555 INFO mapred.LocalJobRunner: map
+2021-10-08 22:38:35,555 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000006_0' done.
+2021-10-08 22:38:35,556 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000006_0: Counters: 15
+	File System Counters
+		FILE: Number of bytes read=234960765
+		FILE: Number of bytes written=633361
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2097000
+		Map output records=0
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=173
+		Total committed heap usage (bytes)=353894400
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=8
+2021-10-08 22:38:35,556 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000006_0
+2021-10-08 22:38:35,556 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000007_0
+2021-10-08 22:38:35,556 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:38:35,556 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:38:35,556 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:38:35,556 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:38:35,557 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:234881024+33554432
+2021-10-08 22:38:54,185 INFO mapred.LocalJobRunner: 
+2021-10-08 22:38:54,185 INFO mapred.Task: Task:attempt_local436953994_0001_m_000007_0 is done. And is in the process of committing
+2021-10-08 22:38:54,185 INFO mapred.LocalJobRunner: 
+2021-10-08 22:38:54,185 INFO mapred.Task: Task attempt_local436953994_0001_m_000007_0 is allowed to commit now
+2021-10-08 22:38:54,187 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000007_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:38:54,187 INFO mapred.LocalJobRunner: map
+2021-10-08 22:38:54,187 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000007_0' done.
+2021-10-08 22:38:54,187 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000007_0: Counters: 16
+	File System Counters
+		FILE: Number of bytes read=268523441
+		FILE: Number of bytes written=633982
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2091101
+		Map output records=53
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=187
+		Total committed heap usage (bytes)=357564416
+	counter
+		NUM_OF_TRIANGLES=53
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=621
+2021-10-08 22:38:54,187 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000007_0
+2021-10-08 22:38:54,187 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000008_0
+2021-10-08 22:38:54,188 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:38:54,188 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:38:54,188 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:38:54,188 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:38:54,189 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:268435456+33554432
+2021-10-08 22:39:11,437 INFO mapred.LocalJobRunner: 
+2021-10-08 22:39:11,438 INFO mapred.Task: Task:attempt_local436953994_0001_m_000008_0 is done. And is in the process of committing
+2021-10-08 22:39:11,438 INFO mapred.LocalJobRunner: 
+2021-10-08 22:39:11,438 INFO mapred.Task: Task attempt_local436953994_0001_m_000008_0 is allowed to commit now
+2021-10-08 22:39:11,440 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000008_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:39:11,441 INFO mapred.LocalJobRunner: map
+2021-10-08 22:39:11,441 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000008_0' done.
+2021-10-08 22:39:11,441 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000008_0: Counters: 16
+	File System Counters
+		FILE: Number of bytes read=302086117
+		FILE: Number of bytes written=634149
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2084909
+		Map output records=12
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=171
+		Total committed heap usage (bytes)=357564416
+	counter
+		NUM_OF_TRIANGLES=12
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=167
+2021-10-08 22:39:11,441 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000008_0
+2021-10-08 22:39:11,441 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000009_0
+2021-10-08 22:39:11,442 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:39:11,442 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:39:11,442 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:39:11,442 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:39:11,443 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:301989888+33554432
+2021-10-08 22:39:28,722 INFO mapred.LocalJobRunner: 
+2021-10-08 22:39:28,722 INFO mapred.Task: Task:attempt_local436953994_0001_m_000009_0 is done. And is in the process of committing
+2021-10-08 22:39:28,722 INFO mapred.LocalJobRunner: 
+2021-10-08 22:39:28,722 INFO mapred.Task: Task attempt_local436953994_0001_m_000009_0 is allowed to commit now
+2021-10-08 22:39:28,724 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000009_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:39:28,724 INFO mapred.LocalJobRunner: map
+2021-10-08 22:39:28,724 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000009_0' done.
+2021-10-08 22:39:28,724 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000009_0: Counters: 15
+	File System Counters
+		FILE: Number of bytes read=335648793
+		FILE: Number of bytes written=634157
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2088097
+		Map output records=0
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=171
+		Total committed heap usage (bytes)=329252864
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=8
+2021-10-08 22:39:28,724 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000009_0
+2021-10-08 22:39:28,724 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000010_0
+2021-10-08 22:39:28,725 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:39:28,725 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:39:28,725 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:39:28,725 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:39:28,726 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:335544320+33554432
+2021-10-08 22:39:45,512 INFO mapred.LocalJobRunner: 
+2021-10-08 22:39:45,512 INFO mapred.Task: Task:attempt_local436953994_0001_m_000010_0 is done. And is in the process of committing
+2021-10-08 22:39:45,513 INFO mapred.LocalJobRunner: 
+2021-10-08 22:39:45,513 INFO mapred.Task: Task attempt_local436953994_0001_m_000010_0 is allowed to commit now
+2021-10-08 22:39:45,514 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000010_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:39:45,514 INFO mapred.LocalJobRunner: map
+2021-10-08 22:39:45,514 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000010_0' done.
+2021-10-08 22:39:45,514 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000010_0: Counters: 16
+	File System Counters
+		FILE: Number of bytes read=369211469
+		FILE: Number of bytes written=636863
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2095824
+		Map output records=239
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=170
+		Total committed heap usage (bytes)=345505792
+	counter
+		NUM_OF_TRIANGLES=239
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=2706
+2021-10-08 22:39:45,514 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000010_0
+2021-10-08 22:39:45,515 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000011_0
+2021-10-08 22:39:45,515 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:39:45,515 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:39:45,515 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:39:45,515 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:39:45,516 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:369098752+33554432
+2021-10-08 22:40:02,428 INFO mapred.LocalJobRunner: 
+2021-10-08 22:40:02,428 INFO mapred.Task: Task:attempt_local436953994_0001_m_000011_0 is done. And is in the process of committing
+2021-10-08 22:40:02,429 INFO mapred.LocalJobRunner: 
+2021-10-08 22:40:02,429 INFO mapred.Task: Task attempt_local436953994_0001_m_000011_0 is allowed to commit now
+2021-10-08 22:40:02,430 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000011_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:40:02,430 INFO mapred.LocalJobRunner: map
+2021-10-08 22:40:02,431 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000011_0' done.
+2021-10-08 22:40:02,431 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000011_0: Counters: 16
+	File System Counters
+		FILE: Number of bytes read=402774080
+		FILE: Number of bytes written=637299
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2166041
+		Map output records=38
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=172
+		Total committed heap usage (bytes)=348127232
+	counter
+		NUM_OF_TRIANGLES=38
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=436
+2021-10-08 22:40:02,431 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000011_0
+2021-10-08 22:40:02,431 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000012_0
+2021-10-08 22:40:02,431 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:40:02,431 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:40:02,431 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:40:02,431 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:40:02,432 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:402653184+33554432
+2021-10-08 22:40:19,141 INFO mapred.LocalJobRunner: 
+2021-10-08 22:40:19,142 INFO mapred.Task: Task:attempt_local436953994_0001_m_000012_0 is done. And is in the process of committing
+2021-10-08 22:40:19,142 INFO mapred.LocalJobRunner: 
+2021-10-08 22:40:19,142 INFO mapred.Task: Task attempt_local436953994_0001_m_000012_0 is allowed to commit now
+2021-10-08 22:40:19,143 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000012_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:40:19,144 INFO mapred.LocalJobRunner: map
+2021-10-08 22:40:19,144 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000012_0' done.
+2021-10-08 22:40:19,144 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000012_0: Counters: 16
+	File System Counters
+		FILE: Number of bytes read=436336691
+		FILE: Number of bytes written=711847
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2263694
+		Map output records=5267
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=171
+		Total committed heap usage (bytes)=351272960
+	counter
+		NUM_OF_TRIANGLES=5267
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=74548
+2021-10-08 22:40:19,144 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000012_0
+2021-10-08 22:40:19,144 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000013_0
+2021-10-08 22:40:19,145 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:40:19,145 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:40:19,145 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:40:19,145 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:40:19,146 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:436207616+33554432
+2021-10-08 22:40:36,089 INFO mapred.LocalJobRunner: 
+2021-10-08 22:40:36,089 INFO mapred.Task: Task:attempt_local436953994_0001_m_000013_0 is done. And is in the process of committing
+2021-10-08 22:40:36,090 INFO mapred.LocalJobRunner: 
+2021-10-08 22:40:36,090 INFO mapred.Task: Task attempt_local436953994_0001_m_000013_0 is allowed to commit now
+2021-10-08 22:40:36,091 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000013_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:40:36,092 INFO mapred.LocalJobRunner: map
+2021-10-08 22:40:36,092 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000013_0' done.
+2021-10-08 22:40:36,092 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000013_0: Counters: 16
+	File System Counters
+		FILE: Number of bytes read=469899302
+		FILE: Number of bytes written=733687
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2269204
+		Map output records=1507
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=176
+		Total committed heap usage (bytes)=338165760
+	counter
+		NUM_OF_TRIANGLES=1507
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=21840
+2021-10-08 22:40:36,092 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000013_0
+2021-10-08 22:40:36,092 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000014_0
+2021-10-08 22:40:36,093 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:40:36,093 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:40:36,093 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:40:36,093 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:40:36,095 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:469762048+33554432
+2021-10-08 22:40:53,057 INFO mapred.LocalJobRunner: 
+2021-10-08 22:40:53,057 INFO mapred.Task: Task:attempt_local436953994_0001_m_000014_0 is done. And is in the process of committing
+2021-10-08 22:40:53,057 INFO mapred.LocalJobRunner: 
+2021-10-08 22:40:53,057 INFO mapred.Task: Task attempt_local436953994_0001_m_000014_0 is allowed to commit now
+2021-10-08 22:40:53,059 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000014_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:40:53,059 INFO mapred.LocalJobRunner: map
+2021-10-08 22:40:53,059 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000014_0' done.
+2021-10-08 22:40:53,059 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000014_0: Counters: 16
+	File System Counters
+		FILE: Number of bytes read=503461913
+		FILE: Number of bytes written=801984
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2231403
+		Map output records=4842
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=171
+		Total committed heap usage (bytes)=357564416
+	counter
+		NUM_OF_TRIANGLES=4842
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=68297
+2021-10-08 22:40:53,059 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000014_0
+2021-10-08 22:40:53,059 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000015_0
+2021-10-08 22:40:53,060 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:40:53,060 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:40:53,060 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:40:53,060 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:40:53,061 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:503316480+33554432
+2021-10-08 22:41:09,571 INFO mapred.LocalJobRunner: 
+2021-10-08 22:41:09,572 INFO mapred.Task: Task:attempt_local436953994_0001_m_000015_0 is done. And is in the process of committing
+2021-10-08 22:41:09,572 INFO mapred.LocalJobRunner: 
+2021-10-08 22:41:09,572 INFO mapred.Task: Task attempt_local436953994_0001_m_000015_0 is allowed to commit now
+2021-10-08 22:41:09,573 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000015_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:41:09,574 INFO mapred.LocalJobRunner: map
+2021-10-08 22:41:09,574 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000015_0' done.
+2021-10-08 22:41:09,574 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000015_0: Counters: 15
+	File System Counters
+		FILE: Number of bytes read=537024012
+		FILE: Number of bytes written=801992
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2137074
+		Map output records=0
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=171
+		Total committed heap usage (bytes)=324534272
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=8
+2021-10-08 22:41:09,574 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000015_0
+2021-10-08 22:41:09,574 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000016_0
+2021-10-08 22:41:09,575 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:41:09,575 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:41:09,575 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:41:09,575 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:41:09,576 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:536870912+33554432
+2021-10-08 22:41:26,677 INFO mapred.LocalJobRunner: 
+2021-10-08 22:41:26,677 INFO mapred.Task: Task:attempt_local436953994_0001_m_000016_0 is done. And is in the process of committing
+2021-10-08 22:41:26,677 INFO mapred.LocalJobRunner: 
+2021-10-08 22:41:26,677 INFO mapred.Task: Task attempt_local436953994_0001_m_000016_0 is allowed to commit now
+2021-10-08 22:41:26,678 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000016_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:41:26,679 INFO mapred.LocalJobRunner: map
+2021-10-08 22:41:26,679 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000016_0' done.
+2021-10-08 22:41:26,679 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000016_0: Counters: 16
+	File System Counters
+		FILE: Number of bytes read=570586111
+		FILE: Number of bytes written=809136
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2125640
+		Map output records=486
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=173
+		Total committed heap usage (bytes)=324534272
+	counter
+		NUM_OF_TRIANGLES=486
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=7144
+2021-10-08 22:41:26,679 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000016_0
+2021-10-08 22:41:26,679 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000017_0
+2021-10-08 22:41:26,680 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:41:26,680 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:41:26,680 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:41:26,680 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:41:26,681 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:570425344+33554432
+2021-10-08 22:41:43,511 INFO mapred.LocalJobRunner: 
+2021-10-08 22:41:43,511 INFO mapred.Task: Task:attempt_local436953994_0001_m_000017_0 is done. And is in the process of committing
+2021-10-08 22:41:43,512 INFO mapred.LocalJobRunner: 
+2021-10-08 22:41:43,512 INFO mapred.Task: Task attempt_local436953994_0001_m_000017_0 is allowed to commit now
+2021-10-08 22:41:43,513 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000017_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:41:43,513 INFO mapred.LocalJobRunner: map
+2021-10-08 22:41:43,513 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000017_0' done.
+2021-10-08 22:41:43,513 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000017_0: Counters: 16
+	File System Counters
+		FILE: Number of bytes read=604148210
+		FILE: Number of bytes written=811260
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2096643
+		Map output records=141
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=170
+		Total committed heap usage (bytes)=331874304
+	counter
+		NUM_OF_TRIANGLES=141
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=2124
+2021-10-08 22:41:43,513 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000017_0
+2021-10-08 22:41:43,513 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000018_0
+2021-10-08 22:41:43,514 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:41:43,514 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:41:43,514 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:41:43,514 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:41:43,515 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:603979776+33554432
+2021-10-08 22:42:01,043 INFO mapred.LocalJobRunner: 
+2021-10-08 22:42:01,043 INFO mapred.Task: Task:attempt_local436953994_0001_m_000018_0 is done. And is in the process of committing
+2021-10-08 22:42:01,044 INFO mapred.LocalJobRunner: 
+2021-10-08 22:42:01,044 INFO mapred.Task: Task attempt_local436953994_0001_m_000018_0 is allowed to commit now
+2021-10-08 22:42:01,045 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000018_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:42:01,045 INFO mapred.LocalJobRunner: map
+2021-10-08 22:42:01,045 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000018_0' done.
+2021-10-08 22:42:01,045 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000018_0: Counters: 16
+	File System Counters
+		FILE: Number of bytes read=637710309
+		FILE: Number of bytes written=811332
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2218870
+		Map output records=4
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=176
+		Total committed heap usage (bytes)=357564416
+	counter
+		NUM_OF_TRIANGLES=4
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=72
+2021-10-08 22:42:01,045 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000018_0
+2021-10-08 22:42:01,045 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000019_0
+2021-10-08 22:42:01,046 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:42:01,046 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:42:01,046 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:42:01,046 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:42:01,046 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:637534208+33554432
+2021-10-08 22:42:18,449 INFO mapred.LocalJobRunner: 
+2021-10-08 22:42:18,449 INFO mapred.Task: Task:attempt_local436953994_0001_m_000019_0 is done. And is in the process of committing
+2021-10-08 22:42:18,449 INFO mapred.LocalJobRunner: 
+2021-10-08 22:42:18,450 INFO mapred.Task: Task attempt_local436953994_0001_m_000019_0 is allowed to commit now
+2021-10-08 22:42:18,450 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000019_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:42:18,451 INFO mapred.LocalJobRunner: map
+2021-10-08 22:42:18,451 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000019_0' done.
+2021-10-08 22:42:18,451 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000019_0: Counters: 15
+	File System Counters
+		FILE: Number of bytes read=671271896
+		FILE: Number of bytes written=811340
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2260413
+		Map output records=0
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=176
+		Total committed heap usage (bytes)=357564416
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=8
+2021-10-08 22:42:18,451 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000019_0
+2021-10-08 22:42:18,451 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000020_0
+2021-10-08 22:42:18,452 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:42:18,452 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:42:18,452 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:42:18,452 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:42:18,453 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:671088640+33554432
+2021-10-08 22:42:36,332 INFO mapred.LocalJobRunner: 
+2021-10-08 22:42:36,333 INFO mapred.Task: Task:attempt_local436953994_0001_m_000020_0 is done. And is in the process of committing
+2021-10-08 22:42:36,334 INFO mapred.LocalJobRunner: 
+2021-10-08 22:42:36,334 INFO mapred.Task: Task attempt_local436953994_0001_m_000020_0 is allowed to commit now
+2021-10-08 22:42:36,335 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000020_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:42:36,335 INFO mapred.LocalJobRunner: map
+2021-10-08 22:42:36,335 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000020_0' done.
+2021-10-08 22:42:36,335 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000020_0: Counters: 15
+	File System Counters
+		FILE: Number of bytes read=704833483
+		FILE: Number of bytes written=811348
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2186042
+		Map output records=0
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=179
+		Total committed heap usage (bytes)=308805632
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=8
+2021-10-08 22:42:36,335 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000020_0
+2021-10-08 22:42:36,335 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000021_0
+2021-10-08 22:42:36,336 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:42:36,336 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:42:36,336 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:42:36,336 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:42:36,337 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:704643072+33554432
+2021-10-08 22:42:54,173 INFO mapred.LocalJobRunner: 
+2021-10-08 22:42:54,174 INFO mapred.Task: Task:attempt_local436953994_0001_m_000021_0 is done. And is in the process of committing
+2021-10-08 22:42:54,174 INFO mapred.LocalJobRunner: 
+2021-10-08 22:42:54,174 INFO mapred.Task: Task attempt_local436953994_0001_m_000021_0 is allowed to commit now
+2021-10-08 22:42:54,175 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000021_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:42:54,175 INFO mapred.LocalJobRunner: map
+2021-10-08 22:42:54,175 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000021_0' done.
+2021-10-08 22:42:54,175 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000021_0: Counters: 16
+	File System Counters
+		FILE: Number of bytes read=738395070
+		FILE: Number of bytes written=845373
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2178819
+		Map output records=2325
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=178
+		Total committed heap usage (bytes)=337117184
+	counter
+		NUM_OF_TRIANGLES=2325
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=34025
+2021-10-08 22:42:54,175 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000021_0
+2021-10-08 22:42:54,176 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000022_0
+2021-10-08 22:42:54,176 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:42:54,176 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:42:54,176 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:42:54,176 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:42:54,177 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:738197504+33554432
+2021-10-08 22:43:12,227 INFO mapred.LocalJobRunner: 
+2021-10-08 22:43:12,227 INFO mapred.Task: Task:attempt_local436953994_0001_m_000022_0 is done. And is in the process of committing
+2021-10-08 22:43:12,228 INFO mapred.LocalJobRunner: 
+2021-10-08 22:43:12,228 INFO mapred.Task: Task attempt_local436953994_0001_m_000022_0 is allowed to commit now
+2021-10-08 22:43:12,229 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000022_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:43:12,229 INFO mapred.LocalJobRunner: map
+2021-10-08 22:43:12,229 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000022_0' done.
+2021-10-08 22:43:12,229 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000022_0: Counters: 16
+	File System Counters
+		FILE: Number of bytes read=771956657
+		FILE: Number of bytes written=964236
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2415681
+		Map output records=8498
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=181
+		Total committed heap usage (bytes)=353894400
+	counter
+		NUM_OF_TRIANGLES=8498
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=118863
+2021-10-08 22:43:12,229 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000022_0
+2021-10-08 22:43:12,229 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000023_0
+2021-10-08 22:43:12,230 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:43:12,230 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:43:12,230 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:43:12,230 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:43:12,231 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:771751936+33554432
+2021-10-08 22:43:30,519 INFO mapred.LocalJobRunner: 
+2021-10-08 22:43:30,520 INFO mapred.Task: Task:attempt_local436953994_0001_m_000023_0 is done. And is in the process of committing
+2021-10-08 22:43:30,520 INFO mapred.LocalJobRunner: 
+2021-10-08 22:43:30,520 INFO mapred.Task: Task attempt_local436953994_0001_m_000023_0 is allowed to commit now
+2021-10-08 22:43:30,521 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000023_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:43:30,521 INFO mapred.LocalJobRunner: map
+2021-10-08 22:43:30,521 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000023_0' done.
+2021-10-08 22:43:30,521 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000023_0: Counters: 15
+	File System Counters
+		FILE: Number of bytes read=805517732
+		FILE: Number of bytes written=964244
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2408938
+		Map output records=0
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=190
+		Total committed heap usage (bytes)=351272960
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=8
+2021-10-08 22:43:30,521 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000023_0
+2021-10-08 22:43:30,521 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000024_0
+2021-10-08 22:43:30,522 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:43:30,522 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:43:30,522 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:43:30,522 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:43:30,523 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:805306368+33554432
+2021-10-08 22:43:48,881 INFO mapred.LocalJobRunner: 
+2021-10-08 22:43:48,881 INFO mapred.Task: Task:attempt_local436953994_0001_m_000024_0 is done. And is in the process of committing
+2021-10-08 22:43:48,882 INFO mapred.LocalJobRunner: 
+2021-10-08 22:43:48,882 INFO mapred.Task: Task attempt_local436953994_0001_m_000024_0 is allowed to commit now
+2021-10-08 22:43:48,883 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000024_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:43:48,883 INFO mapred.LocalJobRunner: map
+2021-10-08 22:43:48,883 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000024_0' done.
+2021-10-08 22:43:48,883 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000024_0: Counters: 15
+	File System Counters
+		FILE: Number of bytes read=839078807
+		FILE: Number of bytes written=964252
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2263175
+		Map output records=0
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=183
+		Total committed heap usage (bytes)=310902784
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=8
+2021-10-08 22:43:48,883 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000024_0
+2021-10-08 22:43:48,883 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000025_0
+2021-10-08 22:43:48,884 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:43:48,884 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:43:48,884 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:43:48,884 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:43:48,885 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:838860800+33554432
+2021-10-08 22:44:07,253 INFO mapred.LocalJobRunner: 
+2021-10-08 22:44:07,253 INFO mapred.Task: Task:attempt_local436953994_0001_m_000025_0 is done. And is in the process of committing
+2021-10-08 22:44:07,254 INFO mapred.LocalJobRunner: 
+2021-10-08 22:44:07,254 INFO mapred.Task: Task attempt_local436953994_0001_m_000025_0 is allowed to commit now
+2021-10-08 22:44:07,255 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000025_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:44:07,255 INFO mapred.LocalJobRunner: map
+2021-10-08 22:44:07,255 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000025_0' done.
+2021-10-08 22:44:07,255 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000025_0: Counters: 15
+	File System Counters
+		FILE: Number of bytes read=872639882
+		FILE: Number of bytes written=964260
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2269687
+		Map output records=0
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=186
+		Total committed heap usage (bytes)=344981504
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=8
+2021-10-08 22:44:07,278 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000025_0
+2021-10-08 22:44:07,278 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000026_0
+2021-10-08 22:44:07,278 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:44:07,278 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:44:07,279 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:44:07,279 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:44:07,280 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:872415232+33554432
+2021-10-08 22:44:26,305 INFO mapred.LocalJobRunner: 
+2021-10-08 22:44:26,306 INFO mapred.Task: Task:attempt_local436953994_0001_m_000026_0 is done. And is in the process of committing
+2021-10-08 22:44:26,306 INFO mapred.LocalJobRunner: 
+2021-10-08 22:44:26,306 INFO mapred.Task: Task attempt_local436953994_0001_m_000026_0 is allowed to commit now
+2021-10-08 22:44:26,307 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000026_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:44:26,307 INFO mapred.LocalJobRunner: map
+2021-10-08 22:44:26,307 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000026_0' done.
+2021-10-08 22:44:26,307 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000026_0: Counters: 15
+	File System Counters
+		FILE: Number of bytes read=906200445
+		FILE: Number of bytes written=964268
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2272706
+		Map output records=0
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=193
+		Total committed heap usage (bytes)=321912832
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=8
+2021-10-08 22:44:26,307 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000026_0
+2021-10-08 22:44:26,307 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000027_0
+2021-10-08 22:44:26,308 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:44:26,308 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:44:26,308 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:44:26,308 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:44:26,308 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:905969664+33554432
+2021-10-08 22:44:46,658 INFO mapred.LocalJobRunner: 
+2021-10-08 22:44:46,659 INFO mapred.Task: Task:attempt_local436953994_0001_m_000027_0 is done. And is in the process of committing
+2021-10-08 22:44:46,659 INFO mapred.LocalJobRunner: 
+2021-10-08 22:44:46,659 INFO mapred.Task: Task attempt_local436953994_0001_m_000027_0 is allowed to commit now
+2021-10-08 22:44:46,660 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000027_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:44:46,660 INFO mapred.LocalJobRunner: map
+2021-10-08 22:44:46,660 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000027_0' done.
+2021-10-08 22:44:46,660 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000027_0: Counters: 15
+	File System Counters
+		FILE: Number of bytes read=939761008
+		FILE: Number of bytes written=964276
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2259860
+		Map output records=0
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=204
+		Total committed heap usage (bytes)=315097088
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=8
+2021-10-08 22:44:46,660 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000027_0
+2021-10-08 22:44:46,660 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000028_0
+2021-10-08 22:44:46,661 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:44:46,661 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:44:46,661 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:44:46,661 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:44:46,661 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:939524096+33554432
+2021-10-08 22:45:05,492 INFO mapred.LocalJobRunner: 
+2021-10-08 22:45:05,492 INFO mapred.Task: Task:attempt_local436953994_0001_m_000028_0 is done. And is in the process of committing
+2021-10-08 22:45:05,492 INFO mapred.LocalJobRunner: 
+2021-10-08 22:45:05,492 INFO mapred.Task: Task attempt_local436953994_0001_m_000028_0 is allowed to commit now
+2021-10-08 22:45:05,493 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000028_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:45:05,494 INFO mapred.LocalJobRunner: map
+2021-10-08 22:45:05,494 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000028_0' done.
+2021-10-08 22:45:05,494 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000028_0: Counters: 15
+	File System Counters
+		FILE: Number of bytes read=973321571
+		FILE: Number of bytes written=964284
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2120888
+		Map output records=0
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=195
+		Total committed heap usage (bytes)=322437120
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=8
+2021-10-08 22:45:05,494 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000028_0
+2021-10-08 22:45:05,494 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000029_0
+2021-10-08 22:45:05,495 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:45:05,495 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:45:05,495 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:45:05,495 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:45:05,495 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:973078528+33554432
+2021-10-08 22:45:22,753 INFO mapred.LocalJobRunner: 
+2021-10-08 22:45:22,753 INFO mapred.Task: Task:attempt_local436953994_0001_m_000029_0 is done. And is in the process of committing
+2021-10-08 22:45:22,753 INFO mapred.LocalJobRunner: 
+2021-10-08 22:45:22,753 INFO mapred.Task: Task attempt_local436953994_0001_m_000029_0 is allowed to commit now
+2021-10-08 22:45:22,754 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000029_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:45:22,755 INFO mapred.LocalJobRunner: map
+2021-10-08 22:45:22,755 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000029_0' done.
+2021-10-08 22:45:22,755 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000029_0: Counters: 15
+	File System Counters
+		FILE: Number of bytes read=1006882134
+		FILE: Number of bytes written=964292
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2127011
+		Map output records=0
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=177
+		Total committed heap usage (bytes)=334495744
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=8
+2021-10-08 22:45:22,755 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000029_0
+2021-10-08 22:45:22,755 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000030_0
+2021-10-08 22:45:22,756 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:45:22,756 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:45:22,756 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:45:22,756 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:45:22,756 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:1006632960+33554432
+2021-10-08 22:45:39,399 INFO mapred.LocalJobRunner: 
+2021-10-08 22:45:39,399 INFO mapred.Task: Task:attempt_local436953994_0001_m_000030_0 is done. And is in the process of committing
+2021-10-08 22:45:39,400 INFO mapred.LocalJobRunner: 
+2021-10-08 22:45:39,400 INFO mapred.Task: Task attempt_local436953994_0001_m_000030_0 is allowed to commit now
+2021-10-08 22:45:39,401 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000030_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:45:39,401 INFO mapred.LocalJobRunner: map
+2021-10-08 22:45:39,401 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000030_0' done.
+2021-10-08 22:45:39,401 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000030_0: Counters: 15
+	File System Counters
+		FILE: Number of bytes read=1040442185
+		FILE: Number of bytes written=964300
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2130567
+		Map output records=0
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=172
+		Total committed heap usage (bytes)=345505792
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=8
+2021-10-08 22:45:39,401 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000030_0
+2021-10-08 22:45:39,401 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000031_0
+2021-10-08 22:45:39,402 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:45:39,402 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:45:39,402 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:45:39,402 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:45:39,403 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:1040187392+33554432
+2021-10-08 22:45:56,959 INFO mapred.LocalJobRunner: 
+2021-10-08 22:45:56,959 INFO mapred.Task: Task:attempt_local436953994_0001_m_000031_0 is done. And is in the process of committing
+2021-10-08 22:45:56,960 INFO mapred.LocalJobRunner: 
+2021-10-08 22:45:56,960 INFO mapred.Task: Task attempt_local436953994_0001_m_000031_0 is allowed to commit now
+2021-10-08 22:45:56,961 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000031_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:45:56,961 INFO mapred.LocalJobRunner: map
+2021-10-08 22:45:56,961 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000031_0' done.
+2021-10-08 22:45:56,961 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000031_0: Counters: 15
+	File System Counters
+		FILE: Number of bytes read=1074002236
+		FILE: Number of bytes written=964308
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2123405
+		Map output records=0
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=177
+		Total committed heap usage (bytes)=326631424
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=8
+2021-10-08 22:45:56,961 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000031_0
+2021-10-08 22:45:56,961 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000032_0
+2021-10-08 22:45:56,962 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:45:56,962 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:45:56,962 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:45:56,962 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:45:56,962 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:1073741824+33554432
+2021-10-08 22:46:15,140 INFO mapred.LocalJobRunner: 
+2021-10-08 22:46:15,140 INFO mapred.Task: Task:attempt_local436953994_0001_m_000032_0 is done. And is in the process of committing
+2021-10-08 22:46:15,141 INFO mapred.LocalJobRunner: 
+2021-10-08 22:46:15,141 INFO mapred.Task: Task attempt_local436953994_0001_m_000032_0 is allowed to commit now
+2021-10-08 22:46:15,143 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000032_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:46:15,144 INFO mapred.LocalJobRunner: map
+2021-10-08 22:46:15,144 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000032_0' done.
+2021-10-08 22:46:15,144 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000032_0: Counters: 15
+	File System Counters
+		FILE: Number of bytes read=1107562287
+		FILE: Number of bytes written=964316
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2110739
+		Map output records=0
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=181
+		Total committed heap usage (bytes)=337117184
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=8
+2021-10-08 22:46:15,144 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000032_0
+2021-10-08 22:46:15,144 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000033_0
+2021-10-08 22:46:15,145 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:46:15,145 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:46:15,146 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:46:15,146 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:46:15,147 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:1107296256+33554432
+2021-10-08 22:46:37,072 INFO mapred.LocalJobRunner: 
+2021-10-08 22:46:37,073 INFO mapred.Task: Task:attempt_local436953994_0001_m_000033_0 is done. And is in the process of committing
+2021-10-08 22:46:37,073 INFO mapred.LocalJobRunner: 
+2021-10-08 22:46:37,073 INFO mapred.Task: Task attempt_local436953994_0001_m_000033_0 is allowed to commit now
+2021-10-08 22:46:37,074 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000033_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:46:37,074 INFO mapred.LocalJobRunner: map
+2021-10-08 22:46:37,074 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000033_0' done.
+2021-10-08 22:46:37,075 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000033_0: Counters: 15
+	File System Counters
+		FILE: Number of bytes read=1141122338
+		FILE: Number of bytes written=964324
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2117477
+		Map output records=0
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=273
+		Total committed heap usage (bytes)=329252864
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=8
+2021-10-08 22:46:37,075 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000033_0
+2021-10-08 22:46:37,075 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000034_0
+2021-10-08 22:46:37,075 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:46:37,075 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:46:37,075 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:46:37,075 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:46:37,077 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:1140850688+33554432
+2021-10-08 22:46:54,498 INFO mapred.LocalJobRunner: 
+2021-10-08 22:46:54,498 INFO mapred.Task: Task:attempt_local436953994_0001_m_000034_0 is done. And is in the process of committing
+2021-10-08 22:46:54,498 INFO mapred.LocalJobRunner: 
+2021-10-08 22:46:54,498 INFO mapred.Task: Task attempt_local436953994_0001_m_000034_0 is allowed to commit now
+2021-10-08 22:46:54,499 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000034_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:46:54,500 INFO mapred.LocalJobRunner: map
+2021-10-08 22:46:54,500 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000034_0' done.
+2021-10-08 22:46:54,500 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000034_0: Counters: 15
+	File System Counters
+		FILE: Number of bytes read=1174681877
+		FILE: Number of bytes written=964332
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2135968
+		Map output records=0
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=177
+		Total committed heap usage (bytes)=310902784
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=8
+2021-10-08 22:46:54,500 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000034_0
+2021-10-08 22:46:54,500 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000035_0
+2021-10-08 22:46:54,500 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:46:54,500 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:46:54,501 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:46:54,501 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:46:54,501 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:1174405120+33554432
+2021-10-08 22:47:12,833 INFO mapred.LocalJobRunner: 
+2021-10-08 22:47:12,834 INFO mapred.Task: Task:attempt_local436953994_0001_m_000035_0 is done. And is in the process of committing
+2021-10-08 22:47:12,834 INFO mapred.LocalJobRunner: 
+2021-10-08 22:47:12,834 INFO mapred.Task: Task attempt_local436953994_0001_m_000035_0 is allowed to commit now
+2021-10-08 22:47:12,835 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000035_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:47:12,835 INFO mapred.LocalJobRunner: map
+2021-10-08 22:47:12,835 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000035_0' done.
+2021-10-08 22:47:12,835 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000035_0: Counters: 15
+	File System Counters
+		FILE: Number of bytes read=1208241416
+		FILE: Number of bytes written=964340
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2112610
+		Map output records=0
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=184
+		Total committed heap usage (bytes)=348127232
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=8
+2021-10-08 22:47:12,835 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000035_0
+2021-10-08 22:47:12,835 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000036_0
+2021-10-08 22:47:12,836 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:47:12,836 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:47:12,836 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:47:12,836 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:47:12,836 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:1207959552+33554432
+2021-10-08 22:47:30,136 INFO mapred.LocalJobRunner: 
+2021-10-08 22:47:30,136 INFO mapred.Task: Task:attempt_local436953994_0001_m_000036_0 is done. And is in the process of committing
+2021-10-08 22:47:30,137 INFO mapred.LocalJobRunner: 
+2021-10-08 22:47:30,137 INFO mapred.Task: Task attempt_local436953994_0001_m_000036_0 is allowed to commit now
+2021-10-08 22:47:30,138 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000036_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:47:30,138 INFO mapred.LocalJobRunner: map
+2021-10-08 22:47:30,138 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000036_0' done.
+2021-10-08 22:47:30,138 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000036_0: Counters: 15
+	File System Counters
+		FILE: Number of bytes read=1241800955
+		FILE: Number of bytes written=964348
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2069309
+		Map output records=0
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=178
+		Total committed heap usage (bytes)=339738624
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=8
+2021-10-08 22:47:30,138 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000036_0
+2021-10-08 22:47:30,138 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000037_0
+2021-10-08 22:47:30,138 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:47:30,138 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:47:30,138 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:47:30,138 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:47:30,139 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:1241513984+33554432
+2021-10-08 22:47:49,746 INFO mapred.LocalJobRunner: 
+2021-10-08 22:47:49,747 INFO mapred.Task: Task:attempt_local436953994_0001_m_000037_0 is done. And is in the process of committing
+2021-10-08 22:47:49,747 INFO mapred.LocalJobRunner: 
+2021-10-08 22:47:49,747 INFO mapred.Task: Task attempt_local436953994_0001_m_000037_0 is allowed to commit now
+2021-10-08 22:47:49,748 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000037_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:47:49,748 INFO mapred.LocalJobRunner: map
+2021-10-08 22:47:49,748 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000037_0' done.
+2021-10-08 22:47:49,748 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000037_0: Counters: 15
+	File System Counters
+		FILE: Number of bytes read=1275359982
+		FILE: Number of bytes written=964356
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2087873
+		Map output records=0
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=217
+		Total committed heap usage (bytes)=334495744
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=8
+2021-10-08 22:47:49,748 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000037_0
+2021-10-08 22:47:49,748 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000038_0
+2021-10-08 22:47:49,749 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:47:49,749 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:47:49,749 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:47:49,749 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:47:49,750 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:1275068416+33554432
+2021-10-08 22:48:07,531 INFO mapred.LocalJobRunner: 
+2021-10-08 22:48:07,531 INFO mapred.Task: Task:attempt_local436953994_0001_m_000038_0 is done. And is in the process of committing
+2021-10-08 22:48:07,532 INFO mapred.LocalJobRunner: 
+2021-10-08 22:48:07,532 INFO mapred.Task: Task attempt_local436953994_0001_m_000038_0 is allowed to commit now
+2021-10-08 22:48:07,533 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000038_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:48:07,533 INFO mapred.LocalJobRunner: map
+2021-10-08 22:48:07,533 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000038_0' done.
+2021-10-08 22:48:07,533 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000038_0: Counters: 15
+	File System Counters
+		FILE: Number of bytes read=1308919009
+		FILE: Number of bytes written=964364
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2054563
+		Map output records=0
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=180
+		Total committed heap usage (bytes)=315097088
+	File Input Format Counters 
+		Bytes Read=33558528
+	File Output Format Counters 
+		Bytes Written=8
+2021-10-08 22:48:07,533 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000038_0
+2021-10-08 22:48:07,533 INFO mapred.LocalJobRunner: Starting task: attempt_local436953994_0001_m_000039_0
+2021-10-08 22:48:07,534 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2021-10-08 22:48:07,534 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2021-10-08 22:48:07,534 INFO util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+2021-10-08 22:48:07,534 INFO mapred.Task:  Using ResourceCalculatorProcessTree : null
+2021-10-08 22:48:07,535 INFO mapred.MapTask: Processing split: file:/Users/sunho/Dropbox/Boston/CS6240/HW1/twitter-dataset/data/edges.csv:1308622848+10658977
+2021-10-08 22:48:24,583 INFO mapred.LocalJobRunner: 
+2021-10-08 22:48:24,583 INFO mapred.Task: Task:attempt_local436953994_0001_m_000039_0 is done. And is in the process of committing
+2021-10-08 22:48:24,584 INFO mapred.LocalJobRunner: 
+2021-10-08 22:48:24,584 INFO mapred.Task: Task attempt_local436953994_0001_m_000039_0 is allowed to commit now
+2021-10-08 22:48:24,584 INFO output.FileOutputCommitter: Saved output of task 'attempt_local436953994_0001_m_000039_0' to file:/Users/sunho/Dropbox/Boston/CS6240/HW2/hw-2-jill666666/output
+2021-10-08 22:48:24,585 INFO mapred.LocalJobRunner: map
+2021-10-08 22:48:24,585 INFO mapred.Task: Task 'attempt_local436953994_0001_m_000039_0' done.
+2021-10-08 22:48:24,585 INFO mapred.Task: Final Counters for attempt_local436953994_0001_m_000039_0: Counters: 15
+	File System Counters
+		FILE: Number of bytes read=1319578485
+		FILE: Number of bytes written=964372
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=657264
+		Map output records=0
+		Input split bytes=139
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=173
+		Total committed heap usage (bytes)=351272960
+	File Input Format Counters 
+		Bytes Read=10658977
+	File Output Format Counters 
+		Bytes Written=8
+2021-10-08 22:48:24,585 INFO mapred.LocalJobRunner: Finishing task: attempt_local436953994_0001_m_000039_0
+2021-10-08 22:48:24,585 INFO mapred.LocalJobRunner: map task executor complete.
+2021-10-08 22:48:24,946 INFO mapreduce.Job: Job job_local436953994_0001 completed successfully
+2021-10-08 22:48:24,962 INFO mapreduce.Job: Counters: 16
+	File System Counters
+		FILE: Number of bytes read=27498889062
+		FILE: Number of bytes written=32895328
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=85331845
+		Map output records=26394
+		Input split bytes=5560
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=7338
+		Total committed heap usage (bytes)=13413384192
+	counter
+		NUM_OF_TRIANGLES=26394
+	File Input Format Counters 
+		Bytes Read=1319441569
+	File Output Format Counters 
+		Bytes Written=369966
+2021-10-08 22:48:24,968 INFO wc.ReplicatedJoin: num of output edges: 26394
+2021-10-08 22:48:24,968 INFO wc.ReplicatedJoin: num of triangles: 8798
+sunho@Sunhos-MacBook-Pro hw-2-jill666666 % 

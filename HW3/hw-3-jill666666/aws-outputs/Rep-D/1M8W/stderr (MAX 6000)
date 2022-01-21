@@ -1,0 +1,735 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/mnt1/yarn/usercache/hadoop/filecache/10/__spark_libs__3459032688573937484.zip/slf4j-log4j12-1.7.30.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/mnt1/yarn/usercache/hadoop/filecache/10/__spark_libs__3459032688573937484.zip/slf4j-log4j12-1.7.12.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/mnt1/yarn/usercache/hadoop/filecache/10/__spark_libs__3459032688573937484.zip/RedshiftJDBC.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+21/10/22 14:04:43 INFO SignalUtils: Registering signal handler for TERM
+21/10/22 14:04:43 INFO SignalUtils: Registering signal handler for HUP
+21/10/22 14:04:43 INFO SignalUtils: Registering signal handler for INT
+21/10/22 14:04:44 INFO SecurityManager: Changing view acls to: yarn,hadoop
+21/10/22 14:04:44 INFO SecurityManager: Changing modify acls to: yarn,hadoop
+21/10/22 14:04:44 INFO SecurityManager: Changing view acls groups to: 
+21/10/22 14:04:44 INFO SecurityManager: Changing modify acls groups to: 
+21/10/22 14:04:44 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(yarn, hadoop); groups with view permissions: Set(); users  with modify permissions: Set(yarn, hadoop); groups with modify permissions: Set()
+21/10/22 14:04:44 INFO ApplicationMaster: ApplicationAttemptId: appattempt_1634911319426_0001_000001
+21/10/22 14:04:44 INFO ApplicationMaster: Starting the user application in a separate Thread
+21/10/22 14:04:44 INFO ApplicationMaster: Waiting for spark context initialization...
+21/10/22 14:04:44 INFO SparkContext: Running Spark version 3.1.2-amzn-0
+21/10/22 14:04:44 INFO ResourceUtils: ==============================================================
+21/10/22 14:04:44 INFO ResourceUtils: No custom resources configured for spark.driver.
+21/10/22 14:04:44 INFO ResourceUtils: ==============================================================
+21/10/22 14:04:44 INFO SparkContext: Submitted application: RS Triangle Count
+21/10/22 14:04:44 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 4, script: , vendor: , memory -> name: memory, amount: 9486, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+21/10/22 14:04:44 INFO ResourceProfile: Limiting resource is cpus at 4 tasks per executor
+21/10/22 14:04:44 INFO ResourceProfileManager: Added ResourceProfile id: 0
+21/10/22 14:04:44 INFO SecurityManager: Changing view acls to: yarn,hadoop
+21/10/22 14:04:44 INFO SecurityManager: Changing modify acls to: yarn,hadoop
+21/10/22 14:04:44 INFO SecurityManager: Changing view acls groups to: 
+21/10/22 14:04:44 INFO SecurityManager: Changing modify acls groups to: 
+21/10/22 14:04:44 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(yarn, hadoop); groups with view permissions: Set(); users  with modify permissions: Set(yarn, hadoop); groups with modify permissions: Set()
+21/10/22 14:04:44 INFO Utils: Successfully started service 'sparkDriver' on port 45057.
+21/10/22 14:04:44 INFO SparkEnv: Registering MapOutputTracker
+21/10/22 14:04:45 INFO SparkEnv: Registering BlockManagerMaster
+21/10/22 14:04:45 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+21/10/22 14:04:45 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+21/10/22 14:04:45 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+21/10/22 14:04:45 INFO DiskBlockManager: Created local directory at /mnt/yarn/usercache/hadoop/appcache/application_1634911319426_0001/blockmgr-f1e8ee71-46d9-422e-9487-5c4d8eb0c980
+21/10/22 14:04:45 INFO DiskBlockManager: Created local directory at /mnt1/yarn/usercache/hadoop/appcache/application_1634911319426_0001/blockmgr-4c9e8676-d145-4594-8011-a8869b53c198
+21/10/22 14:04:45 INFO MemoryStore: MemoryStore started with capacity 1028.8 MiB
+21/10/22 14:04:45 INFO SparkEnv: Registering OutputCommitCoordinator
+21/10/22 14:04:45 INFO log: Logging initialized @2814ms to org.sparkproject.jetty.util.log.Slf4jLog
+21/10/22 14:04:45 INFO Server: jetty-9.4.40.v20210413; built: 2021-04-13T20:42:42.668Z; git: b881a572662e1943a14ae12e7e1207989f218b74; jvm 1.8.0_302-b08
+21/10/22 14:04:45 INFO Server: Started @2938ms
+21/10/22 14:04:45 INFO AbstractConnector: Started ServerConnector@1b670a03{HTTP/1.1, (http/1.1)}{0.0.0.0:34525}
+21/10/22 14:04:45 INFO Utils: Successfully started service 'SparkUI' on port 34525.
+21/10/22 14:04:45 INFO ServerInfo: Adding filter to /jobs: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+21/10/22 14:04:45 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@f49bdf5{/jobs,null,AVAILABLE,@Spark}
+21/10/22 14:04:45 INFO ServerInfo: Adding filter to /jobs/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+21/10/22 14:04:45 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@534a4e9f{/jobs/json,null,AVAILABLE,@Spark}
+21/10/22 14:04:45 INFO ServerInfo: Adding filter to /jobs/job: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+21/10/22 14:04:45 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@8a473e1{/jobs/job,null,AVAILABLE,@Spark}
+21/10/22 14:04:45 INFO ServerInfo: Adding filter to /jobs/job/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+21/10/22 14:04:45 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@347c7bbe{/jobs/job/json,null,AVAILABLE,@Spark}
+21/10/22 14:04:45 INFO ServerInfo: Adding filter to /stages: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+21/10/22 14:04:45 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@fe43b21{/stages,null,AVAILABLE,@Spark}
+21/10/22 14:04:45 INFO ServerInfo: Adding filter to /stages/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+21/10/22 14:04:45 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@60d2720a{/stages/json,null,AVAILABLE,@Spark}
+21/10/22 14:04:45 INFO ServerInfo: Adding filter to /stages/stage: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+21/10/22 14:04:45 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@3159d5cc{/stages/stage,null,AVAILABLE,@Spark}
+21/10/22 14:04:45 INFO ServerInfo: Adding filter to /stages/stage/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+21/10/22 14:04:45 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@1c09a95f{/stages/stage/json,null,AVAILABLE,@Spark}
+21/10/22 14:04:45 INFO ServerInfo: Adding filter to /stages/pool: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+21/10/22 14:04:45 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@42139e7e{/stages/pool,null,AVAILABLE,@Spark}
+21/10/22 14:04:45 INFO ServerInfo: Adding filter to /stages/pool/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+21/10/22 14:04:45 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@32fb7195{/stages/pool/json,null,AVAILABLE,@Spark}
+21/10/22 14:04:45 INFO ServerInfo: Adding filter to /storage: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+21/10/22 14:04:45 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@62bfc79b{/storage,null,AVAILABLE,@Spark}
+21/10/22 14:04:45 INFO ServerInfo: Adding filter to /storage/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+21/10/22 14:04:45 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@6db5568e{/storage/json,null,AVAILABLE,@Spark}
+21/10/22 14:04:45 INFO ServerInfo: Adding filter to /storage/rdd: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+21/10/22 14:04:45 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@737c98a1{/storage/rdd,null,AVAILABLE,@Spark}
+21/10/22 14:04:45 INFO ServerInfo: Adding filter to /storage/rdd/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+21/10/22 14:04:45 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@5f6a68a6{/storage/rdd/json,null,AVAILABLE,@Spark}
+21/10/22 14:04:45 INFO ServerInfo: Adding filter to /environment: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+21/10/22 14:04:45 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@6ee2900a{/environment,null,AVAILABLE,@Spark}
+21/10/22 14:04:45 INFO ServerInfo: Adding filter to /environment/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+21/10/22 14:04:45 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@2be29d9{/environment/json,null,AVAILABLE,@Spark}
+21/10/22 14:04:45 INFO ServerInfo: Adding filter to /executors: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+21/10/22 14:04:45 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@dd339f0{/executors,null,AVAILABLE,@Spark}
+21/10/22 14:04:45 INFO ServerInfo: Adding filter to /executors/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+21/10/22 14:04:45 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@72953a60{/executors/json,null,AVAILABLE,@Spark}
+21/10/22 14:04:45 INFO ServerInfo: Adding filter to /executors/threadDump: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+21/10/22 14:04:45 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@22623a68{/executors/threadDump,null,AVAILABLE,@Spark}
+21/10/22 14:04:45 INFO ServerInfo: Adding filter to /executors/threadDump/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+21/10/22 14:04:45 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@254a6741{/executors/threadDump/json,null,AVAILABLE,@Spark}
+21/10/22 14:04:45 INFO ServerInfo: Adding filter to /static: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+21/10/22 14:04:45 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@7ab88c22{/static,null,AVAILABLE,@Spark}
+21/10/22 14:04:45 INFO ServerInfo: Adding filter to /: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+21/10/22 14:04:45 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@64cdaba2{/,null,AVAILABLE,@Spark}
+21/10/22 14:04:45 INFO ServerInfo: Adding filter to /api: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+21/10/22 14:04:45 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@74547b8f{/api,null,AVAILABLE,@Spark}
+21/10/22 14:04:45 INFO ServerInfo: Adding filter to /jobs/job/kill: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+21/10/22 14:04:45 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@6f413617{/jobs/job/kill,null,AVAILABLE,@Spark}
+21/10/22 14:04:45 INFO ServerInfo: Adding filter to /stages/stage/kill: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+21/10/22 14:04:45 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@31026258{/stages/stage/kill,null,AVAILABLE,@Spark}
+21/10/22 14:04:45 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://ip-172-31-58-33.ec2.internal:34525
+21/10/22 14:04:45 INFO YarnClusterScheduler: Created YarnClusterScheduler
+21/10/22 14:04:45 INFO PrefetchCoordinator: Started PrefetchCoordinator
+21/10/22 14:04:45 INFO Utils: Using 50 preallocated executors (minExecutors: 0). Set spark.dynamicAllocation.preallocateExecutors to `false` disable executor preallocation.
+21/10/22 14:04:45 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 36251.
+21/10/22 14:04:45 INFO NettyBlockTransferService: Server created on ip-172-31-58-33.ec2.internal:36251
+21/10/22 14:04:45 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+21/10/22 14:04:45 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, ip-172-31-58-33.ec2.internal, 36251, None)
+21/10/22 14:04:45 INFO BlockManagerMasterEndpoint: Registering block manager ip-172-31-58-33.ec2.internal:36251 with 1028.8 MiB RAM, BlockManagerId(driver, ip-172-31-58-33.ec2.internal, 36251, None)
+21/10/22 14:04:45 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, ip-172-31-58-33.ec2.internal, 36251, None)
+21/10/22 14:04:45 INFO BlockManager: external shuffle service port = 7337
+21/10/22 14:04:45 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, ip-172-31-58-33.ec2.internal, 36251, None)
+21/10/22 14:04:46 INFO ServerInfo: Adding filter to /metrics/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+21/10/22 14:04:46 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@6dc96697{/metrics/json,null,AVAILABLE,@Spark}
+21/10/22 14:04:46 INFO SingleEventLogFileWriter: Logging events to hdfs:/var/log/spark/apps/application_1634911319426_0001_1.inprogress
+21/10/22 14:04:47 INFO Utils: Using 50 preallocated executors (minExecutors: 0). Set spark.dynamicAllocation.preallocateExecutors to `false` disable executor preallocation.
+21/10/22 14:04:47 WARN YarnSchedulerBackend$YarnSchedulerEndpoint: Attempted to request executors before the AM has registered!
+21/10/22 14:04:47 INFO RMProxy: Connecting to ResourceManager at ip-172-31-52-49.ec2.internal/172.31.52.49:8030
+21/10/22 14:04:47 INFO YarnRMClient: Registering the ApplicationMaster
+21/10/22 14:04:47 INFO ApplicationMaster: Preparing Local resources
+21/10/22 14:04:47 INFO ApplicationMaster: 
+===============================================================================
+Default YARN executor launch context:
+  env:
+    CLASSPATH -> /usr/lib/hadoop-lzo/lib/*:/usr/lib/hadoop/hadoop-aws.jar:/usr/share/aws/aws-java-sdk/*:/usr/share/aws/emr/goodies/lib/emr-spark-goodies.jar:/usr/share/aws/emr/security/conf:/usr/share/aws/emr/security/lib/*:/usr/share/aws/hmclient/lib/aws-glue-datacatalog-spark-client.jar:/usr/share/java/Hive-JSON-Serde/hive-openx-serde.jar:/usr/share/aws/sagemaker-spark-sdk/lib/sagemaker-spark-sdk.jar:/usr/share/aws/emr/s3select/lib/emr-s3-select-spark-connector.jar:/docker/usr/lib/hadoop-lzo/lib/*:/docker/usr/lib/hadoop/hadoop-aws.jar:/docker/usr/share/aws/aws-java-sdk/*:/docker/usr/share/aws/emr/goodies/lib/emr-spark-goodies.jar:/docker/usr/share/aws/emr/security/conf:/docker/usr/share/aws/emr/security/lib/*:/docker/usr/share/aws/hmclient/lib/aws-glue-datacatalog-spark-client.jar:/docker/usr/share/java/Hive-JSON-Serde/hive-openx-serde.jar:/docker/usr/share/aws/sagemaker-spark-sdk/lib/sagemaker-spark-sdk.jar:/docker/usr/share/aws/emr/s3select/lib/emr-s3-select-spark-connector.jar<CPS>{{PWD}}<CPS>{{PWD}}/__spark_conf__<CPS>{{PWD}}/__spark_libs__/*<CPS>{{PWD}}/__spark_conf__/__hadoop_conf__
+    SPARK_YARN_CONTAINER_CORES -> 4
+    SPARK_YARN_STAGING_DIR -> hdfs://ip-172-31-52-49.ec2.internal:8020/user/hadoop/.sparkStaging/application_1634911319426_0001
+    SPARK_USER -> hadoop
+    SPARK_PUBLIC_DNS -> ip-172-31-58-33.ec2.internal
+
+  command:
+    LD_LIBRARY_PATH=\"/usr/lib/hadoop/lib/native:/usr/lib/hadoop-lzo/lib/native:/docker/usr/lib/hadoop/lib/native:/docker/usr/lib/hadoop-lzo/lib/native:$LD_LIBRARY_PATH\" \ 
+      {{JAVA_HOME}}/bin/java \ 
+      -server \ 
+      -Xmx9486m \ 
+      '-verbose:gc' \ 
+      '-XX:+PrintGCDetails' \ 
+      '-XX:+PrintGCDateStamps' \ 
+      '-XX:OnOutOfMemoryError=kill -9 %p' \ 
+      '-XX:+UseParallelGC' \ 
+      '-XX:InitiatingHeapOccupancyPercent=70' \ 
+      -Djava.io.tmpdir={{PWD}}/tmp \ 
+      '-Dspark.driver.port=45057' \ 
+      '-Dspark.history.ui.port=18080' \ 
+      '-Dspark.ui.port=0' \ 
+      -Dspark.yarn.app.container.log.dir=<LOG_DIR> \ 
+      org.apache.spark.executor.YarnCoarseGrainedExecutorBackend \ 
+      --driver-url \ 
+      spark://CoarseGrainedScheduler@ip-172-31-58-33.ec2.internal:45057 \ 
+      --executor-id \ 
+      <executorId> \ 
+      --hostname \ 
+      <hostname> \ 
+      --cores \ 
+      4 \ 
+      --app-id \ 
+      application_1634911319426_0001 \ 
+      --resourceProfileId \ 
+      0 \ 
+      --user-class-path \ 
+      file:$PWD/__app__.jar \ 
+      1><LOG_DIR>/stdout \ 
+      2><LOG_DIR>/stderr
+
+  resources:
+    __app__.jar -> resource { scheme: "hdfs" host: "ip-172-31-52-49.ec2.internal" port: 8020 file: "/user/hadoop/.sparkStaging/application_1634911319426_0001/spark-demo.jar" } size: 40653 timestamp: 1634911477158 type: FILE visibility: PRIVATE
+    __spark_libs__ -> resource { scheme: "hdfs" host: "ip-172-31-52-49.ec2.internal" port: 8020 file: "/user/hadoop/.sparkStaging/application_1634911319426_0001/__spark_libs__3459032688573937484.zip" } size: 271046058 timestamp: 1634911474770 type: ARCHIVE visibility: PRIVATE
+    __spark_conf__ -> resource { scheme: "hdfs" host: "ip-172-31-52-49.ec2.internal" port: 8020 file: "/user/hadoop/.sparkStaging/application_1634911319426_0001/__spark_conf__.zip" } size: 292077 timestamp: 1634911477789 type: ARCHIVE visibility: PRIVATE
+
+===============================================================================
+21/10/22 14:04:47 INFO YarnAllocator: Resource profile 0 doesn't exist, adding it
+21/10/22 14:04:47 INFO Configuration: resource-types.xml not found
+21/10/22 14:04:47 INFO ResourceUtils: Unable to find 'resource-types.xml'.
+21/10/22 14:04:47 INFO Utils: Using 50 preallocated executors (minExecutors: 0). Set spark.dynamicAllocation.preallocateExecutors to `false` disable executor preallocation.
+21/10/22 14:04:47 INFO YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(spark://YarnAM@ip-172-31-58-33.ec2.internal:45057)
+21/10/22 14:04:47 INFO YarnAllocator: Will request 50 executor container(s) for  ResourceProfile Id: 0, each with 4 core(s) and 11264 MB memory. with custom resources: <memory:11264, max memory:2147483647, vCores:4, max vCores:2147483647>
+21/10/22 14:04:47 INFO YarnAllocator: Submitted 50 unlocalized container requests.
+21/10/22 14:04:47 INFO ApplicationMaster: Started progress reporter thread with (heartbeat : 3000, initial allocation : 200) intervals
+21/10/22 14:04:47 INFO YarnClusterSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+21/10/22 14:04:47 INFO YarnClusterScheduler: YarnClusterScheduler.postStartHook done
+21/10/22 14:04:48 INFO YarnAllocator: Launching container container_1634911319426_0001_01_000002 on host ip-172-31-60-191.ec2.internal for executor with ID 1 for ResourceProfile Id 0 with resources <memory:11264, max memory:12288, vCores:1, max vCores:8>
+21/10/22 14:04:48 INFO YarnAllocator: Launching executor with 9486m of heap (plus 1778m overhead/off heap) and 4 cores
+21/10/22 14:04:48 INFO YarnAllocator: Launching container container_1634911319426_0001_01_000004 on host ip-172-31-57-157.ec2.internal for executor with ID 2 for ResourceProfile Id 0 with resources <memory:11264, max memory:12288, vCores:1, max vCores:8>
+21/10/22 14:04:48 INFO YarnAllocator: Launching executor with 9486m of heap (plus 1778m overhead/off heap) and 4 cores
+21/10/22 14:04:48 INFO YarnAllocator: Launching container container_1634911319426_0001_01_000006 on host ip-172-31-58-48.ec2.internal for executor with ID 3 for ResourceProfile Id 0 with resources <memory:11264, max memory:12288, vCores:1, max vCores:8>
+21/10/22 14:04:48 INFO YarnAllocator: Launching executor with 9486m of heap (plus 1778m overhead/off heap) and 4 cores
+21/10/22 14:04:48 INFO YarnAllocator: Received 3 containers from YARN, launching executors on 3 of them.
+21/10/22 14:04:48 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 354.9 KiB, free 1028.5 MiB)
+21/10/22 14:04:48 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 35.1 KiB, free 1028.5 MiB)
+21/10/22 14:04:48 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 35.1 KiB, free: 1028.8 MiB)
+21/10/22 14:04:48 INFO SparkContext: Created broadcast 0 from textFile at Rep-D.scala:29
+21/10/22 14:04:48 WARN SparkContext: Using an existing SparkContext; some configuration may not take effect.
+21/10/22 14:04:50 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('hdfs:///user/spark/warehouse').
+21/10/22 14:04:50 INFO SharedState: Warehouse path is 'hdfs:///user/spark/warehouse'.
+21/10/22 14:04:50 INFO ServerInfo: Adding filter to /SQL: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+21/10/22 14:04:50 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@1433b0b8{/SQL,null,AVAILABLE,@Spark}
+21/10/22 14:04:50 INFO ServerInfo: Adding filter to /SQL/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+21/10/22 14:04:50 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@53391bf{/SQL/json,null,AVAILABLE,@Spark}
+21/10/22 14:04:50 INFO ServerInfo: Adding filter to /SQL/execution: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+21/10/22 14:04:50 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@34b37a22{/SQL/execution,null,AVAILABLE,@Spark}
+21/10/22 14:04:50 INFO ServerInfo: Adding filter to /SQL/execution/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+21/10/22 14:04:50 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@6c8a26cd{/SQL/execution/json,null,AVAILABLE,@Spark}
+21/10/22 14:04:50 INFO ServerInfo: Adding filter to /static/sql: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+21/10/22 14:04:50 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@74e3ff62{/static/sql,null,AVAILABLE,@Spark}
+21/10/22 14:04:53 INFO CodeGenerator: Code generated in 261.046346 ms
+21/10/22 14:04:53 INFO GPLNativeCodeLoader: Loaded native gpl library
+21/10/22 14:04:53 INFO LzoCodec: Successfully loaded & initialized native-lzo library [hadoop-lzo rev 049362b7cf53ff5f739d6b1532457f2c6cd495e8]
+21/10/22 14:04:54 INFO ClientConfigurationFactory: Set initial getObject socket timeout to 2000 ms.
+21/10/22 14:04:55 INFO YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.31.60.191:59878) with ID 1,  ResourceProfileId 0
+21/10/22 14:04:55 INFO YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.31.58.48:47772) with ID 3,  ResourceProfileId 0
+21/10/22 14:04:55 INFO ExecutorMonitor: New executor 1 has registered (new total is 2)
+21/10/22 14:04:55 INFO ExecutorMonitor: New executor 3 has registered (new total is 3)
+21/10/22 14:04:55 INFO YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.31.57.157:52478) with ID 2,  ResourceProfileId 0
+21/10/22 14:04:55 INFO ExecutorMonitor: New executor 2 has registered (new total is 4)
+21/10/22 14:04:55 INFO BlockManagerMasterEndpoint: Registering block manager ip-172-31-60-191.ec2.internal:44191 with 4.8 GiB RAM, BlockManagerId(1, ip-172-31-60-191.ec2.internal, 44191, None)
+21/10/22 14:04:55 INFO BlockManagerMasterEndpoint: Registering block manager ip-172-31-58-48.ec2.internal:39727 with 4.8 GiB RAM, BlockManagerId(3, ip-172-31-58-48.ec2.internal, 39727, None)
+21/10/22 14:04:55 INFO BlockManagerMasterEndpoint: Registering block manager ip-172-31-57-157.ec2.internal:45937 with 4.8 GiB RAM, BlockManagerId(2, ip-172-31-57-157.ec2.internal, 45937, None)
+21/10/22 14:04:56 INFO FileInputFormat: Total input files to process : 1
+21/10/22 14:04:56 INFO SparkContext: Starting job: $anonfun$withThreadLocalCaptured$1 at FutureTask.java:266
+21/10/22 14:04:56 INFO DAGScheduler: Got job 0 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:266) with 20 output partitions
+21/10/22 14:04:56 INFO DAGScheduler: Final stage: ResultStage 0 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:266)
+21/10/22 14:04:56 INFO DAGScheduler: Parents of final stage: List()
+21/10/22 14:04:56 INFO DAGScheduler: Missing parents: List()
+21/10/22 14:04:56 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[7] at $anonfun$withThreadLocalCaptured$1 at FutureTask.java:266), which has no missing parents
+21/10/22 14:04:56 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 12.9 KiB, free 1028.5 MiB)
+21/10/22 14:04:56 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 6.0 KiB, free 1028.5 MiB)
+21/10/22 14:04:56 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 6.0 KiB, free: 1028.8 MiB)
+21/10/22 14:04:56 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1484
+21/10/22 14:04:56 INFO DAGScheduler: Submitting 20 missing tasks from ResultStage 0 (MapPartitionsRDD[7] at $anonfun$withThreadLocalCaptured$1 at FutureTask.java:266) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+21/10/22 14:04:56 INFO YarnClusterScheduler: Adding task set 0.0 with 20 tasks resource profile 0
+21/10/22 14:04:56 INFO YarnAllocator: Driver requested a total number of 5 executor(s) for resource profile id: 0.
+21/10/22 14:04:56 INFO YarnAllocator: Canceling requests for 45 executor container(s) to have a new desired total 5 executors.
+21/10/22 14:04:56 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (ip-172-31-58-48.ec2.internal, executor 3, partition 0, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:04:56 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1) (ip-172-31-60-191.ec2.internal, executor 1, partition 1, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:04:56 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2) (ip-172-31-57-157.ec2.internal, executor 2, partition 2, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:04:56 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3) (ip-172-31-58-48.ec2.internal, executor 3, partition 3, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:04:56 INFO TaskSetManager: Starting task 4.0 in stage 0.0 (TID 4) (ip-172-31-60-191.ec2.internal, executor 1, partition 4, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:04:56 INFO TaskSetManager: Starting task 5.0 in stage 0.0 (TID 5) (ip-172-31-57-157.ec2.internal, executor 2, partition 5, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:04:56 INFO TaskSetManager: Starting task 6.0 in stage 0.0 (TID 6) (ip-172-31-58-48.ec2.internal, executor 3, partition 6, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:04:56 INFO TaskSetManager: Starting task 7.0 in stage 0.0 (TID 7) (ip-172-31-60-191.ec2.internal, executor 1, partition 7, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:04:56 INFO TaskSetManager: Starting task 8.0 in stage 0.0 (TID 8) (ip-172-31-57-157.ec2.internal, executor 2, partition 8, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:04:56 INFO TaskSetManager: Starting task 9.0 in stage 0.0 (TID 9) (ip-172-31-58-48.ec2.internal, executor 3, partition 9, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:04:56 INFO TaskSetManager: Starting task 10.0 in stage 0.0 (TID 10) (ip-172-31-60-191.ec2.internal, executor 1, partition 10, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:04:56 INFO TaskSetManager: Starting task 11.0 in stage 0.0 (TID 11) (ip-172-31-57-157.ec2.internal, executor 2, partition 11, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:04:56 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 6.0 KiB, free: 4.8 GiB)
+21/10/22 14:04:56 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 6.0 KiB, free: 4.8 GiB)
+21/10/22 14:04:56 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 6.0 KiB, free: 4.8 GiB)
+21/10/22 14:04:57 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 35.1 KiB, free: 4.8 GiB)
+21/10/22 14:04:57 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 35.1 KiB, free: 4.8 GiB)
+21/10/22 14:04:57 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 35.1 KiB, free: 4.8 GiB)
+21/10/22 14:05:05 INFO TaskSetManager: Starting task 12.0 in stage 0.0 (TID 12) (ip-172-31-57-157.ec2.internal, executor 2, partition 12, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:05:05 INFO TaskSetManager: Starting task 13.0 in stage 0.0 (TID 13) (ip-172-31-60-191.ec2.internal, executor 1, partition 13, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:05:05 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 9381 ms on ip-172-31-60-191.ec2.internal (executor 1) (1/20)
+21/10/22 14:05:05 INFO TaskSetManager: Finished task 8.0 in stage 0.0 (TID 8) in 9379 ms on ip-172-31-57-157.ec2.internal (executor 2) (2/20)
+21/10/22 14:05:05 INFO TaskSetManager: Starting task 14.0 in stage 0.0 (TID 14) (ip-172-31-58-48.ec2.internal, executor 3, partition 14, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:05:05 INFO TaskSetManager: Starting task 15.0 in stage 0.0 (TID 15) (ip-172-31-58-48.ec2.internal, executor 3, partition 15, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:05:05 INFO TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 9410 ms on ip-172-31-58-48.ec2.internal (executor 3) (3/20)
+21/10/22 14:05:05 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 9450 ms on ip-172-31-58-48.ec2.internal (executor 3) (4/20)
+21/10/22 14:05:05 INFO TaskSetManager: Starting task 16.0 in stage 0.0 (TID 16) (ip-172-31-57-157.ec2.internal, executor 2, partition 16, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:05:05 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 9472 ms on ip-172-31-57-157.ec2.internal (executor 2) (5/20)
+21/10/22 14:05:05 INFO YarnAllocator: Driver requested a total number of 4 executor(s) for resource profile id: 0.
+21/10/22 14:05:05 INFO YarnAllocator: Canceling requests for 1 executor container(s) to have a new desired total 4 executors.
+21/10/22 14:05:06 INFO TaskSetManager: Starting task 17.0 in stage 0.0 (TID 17) (ip-172-31-60-191.ec2.internal, executor 1, partition 17, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:05:06 INFO TaskSetManager: Finished task 4.0 in stage 0.0 (TID 4) in 9568 ms on ip-172-31-60-191.ec2.internal (executor 1) (6/20)
+21/10/22 14:05:06 INFO TaskSetManager: Starting task 18.0 in stage 0.0 (TID 18) (ip-172-31-57-157.ec2.internal, executor 2, partition 18, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:05:06 INFO TaskSetManager: Finished task 5.0 in stage 0.0 (TID 5) in 9591 ms on ip-172-31-57-157.ec2.internal (executor 2) (7/20)
+21/10/22 14:05:06 INFO TaskSetManager: Starting task 19.0 in stage 0.0 (TID 19) (ip-172-31-60-191.ec2.internal, executor 1, partition 19, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:05:06 INFO TaskSetManager: Finished task 7.0 in stage 0.0 (TID 7) in 9748 ms on ip-172-31-60-191.ec2.internal (executor 1) (8/20)
+21/10/22 14:05:06 INFO TaskSetManager: Finished task 6.0 in stage 0.0 (TID 6) in 9759 ms on ip-172-31-58-48.ec2.internal (executor 3) (9/20)
+21/10/22 14:05:06 INFO YarnAllocator: Driver requested a total number of 3 executor(s) for resource profile id: 0.
+21/10/22 14:05:06 INFO YarnAllocator: Canceling requests for 1 executor container(s) to have a new desired total 3 executors.
+21/10/22 14:05:06 INFO TaskSetManager: Finished task 9.0 in stage 0.0 (TID 9) in 9876 ms on ip-172-31-58-48.ec2.internal (executor 3) (10/20)
+21/10/22 14:05:06 INFO TaskSetManager: Finished task 10.0 in stage 0.0 (TID 10) in 9945 ms on ip-172-31-60-191.ec2.internal (executor 1) (11/20)
+21/10/22 14:05:06 INFO TaskSetManager: Finished task 11.0 in stage 0.0 (TID 11) in 10204 ms on ip-172-31-57-157.ec2.internal (executor 2) (12/20)
+21/10/22 14:05:06 INFO YarnAllocator: Driver requested a total number of 2 executor(s) for resource profile id: 0.
+21/10/22 14:05:08 INFO TaskSetManager: Finished task 19.0 in stage 0.0 (TID 19) in 2516 ms on ip-172-31-60-191.ec2.internal (executor 1) (13/20)
+21/10/22 14:05:09 INFO TaskSetManager: Finished task 14.0 in stage 0.0 (TID 14) in 3302 ms on ip-172-31-58-48.ec2.internal (executor 3) (14/20)
+21/10/22 14:05:09 INFO TaskSetManager: Finished task 15.0 in stage 0.0 (TID 15) in 3304 ms on ip-172-31-58-48.ec2.internal (executor 3) (15/20)
+21/10/22 14:05:09 INFO TaskSetManager: Finished task 17.0 in stage 0.0 (TID 17) in 3888 ms on ip-172-31-60-191.ec2.internal (executor 1) (16/20)
+21/10/22 14:05:09 INFO YarnAllocator: Driver requested a total number of 1 executor(s) for resource profile id: 0.
+21/10/22 14:05:10 INFO TaskSetManager: Finished task 13.0 in stage 0.0 (TID 13) in 4234 ms on ip-172-31-60-191.ec2.internal (executor 1) (17/20)
+21/10/22 14:05:10 INFO TaskSetManager: Finished task 18.0 in stage 0.0 (TID 18) in 4021 ms on ip-172-31-57-157.ec2.internal (executor 2) (18/20)
+21/10/22 14:05:10 INFO TaskSetManager: Finished task 12.0 in stage 0.0 (TID 12) in 4487 ms on ip-172-31-57-157.ec2.internal (executor 2) (19/20)
+21/10/22 14:05:10 INFO TaskSetManager: Finished task 16.0 in stage 0.0 (TID 16) in 4692 ms on ip-172-31-57-157.ec2.internal (executor 2) (20/20)
+21/10/22 14:05:10 INFO YarnClusterScheduler: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+21/10/22 14:05:10 INFO DAGScheduler: ResultStage 0 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:266) finished in 14.293 s
+21/10/22 14:05:10 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+21/10/22 14:05:10 INFO YarnClusterScheduler: Killing all running tasks in stage 0: Stage finished
+21/10/22 14:05:10 INFO DAGScheduler: Job 0 finished: $anonfun$withThreadLocalCaptured$1 at FutureTask.java:266, took 14.396525 s
+21/10/22 14:05:10 INFO YarnAllocator: Driver requested a total number of 0 executor(s) for resource profile id: 0.
+21/10/22 14:05:10 INFO CodeGenerator: Code generated in 16.719951 ms
+21/10/22 14:05:10 INFO BlockManagerInfo: Removed broadcast_1_piece0 on ip-172-31-58-33.ec2.internal:36251 in memory (size: 6.0 KiB, free: 1028.8 MiB)
+21/10/22 14:05:10 INFO BlockManagerInfo: Removed broadcast_1_piece0 on ip-172-31-60-191.ec2.internal:44191 in memory (size: 6.0 KiB, free: 4.8 GiB)
+21/10/22 14:05:10 INFO BlockManagerInfo: Removed broadcast_1_piece0 on ip-172-31-58-48.ec2.internal:39727 in memory (size: 6.0 KiB, free: 4.8 GiB)
+21/10/22 14:05:10 INFO BlockManagerInfo: Removed broadcast_1_piece0 on ip-172-31-57-157.ec2.internal:45937 in memory (size: 6.0 KiB, free: 4.8 GiB)
+21/10/22 14:05:10 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 18.0 MiB, free 1010.5 MiB)
+21/10/22 14:05:10 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 509.9 KiB, free 1010.0 MiB)
+21/10/22 14:05:10 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 509.9 KiB, free: 1028.3 MiB)
+21/10/22 14:05:10 INFO SparkContext: Created broadcast 2 from $anonfun$withThreadLocalCaptured$1 at FutureTask.java:266
+21/10/22 14:05:11 INFO CodeGenerator: Code generated in 35.772981 ms
+21/10/22 14:05:11 INFO SparkContext: Starting job: $anonfun$withThreadLocalCaptured$1 at FutureTask.java:266
+21/10/22 14:05:11 INFO DAGScheduler: Got job 1 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:266) with 20 output partitions
+21/10/22 14:05:11 INFO DAGScheduler: Final stage: ResultStage 1 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:266)
+21/10/22 14:05:11 INFO DAGScheduler: Parents of final stage: List()
+21/10/22 14:05:11 INFO DAGScheduler: Missing parents: List()
+21/10/22 14:05:11 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[10] at $anonfun$withThreadLocalCaptured$1 at FutureTask.java:266), which has no missing parents
+21/10/22 14:05:11 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 15.4 KiB, free 1010.0 MiB)
+21/10/22 14:05:11 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 6.9 KiB, free 1009.9 MiB)
+21/10/22 14:05:11 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 6.9 KiB, free: 1028.3 MiB)
+21/10/22 14:05:11 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1484
+21/10/22 14:05:11 INFO DAGScheduler: Submitting 20 missing tasks from ResultStage 1 (MapPartitionsRDD[10] at $anonfun$withThreadLocalCaptured$1 at FutureTask.java:266) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+21/10/22 14:05:11 INFO YarnClusterScheduler: Adding task set 1.0 with 20 tasks resource profile 0
+21/10/22 14:05:11 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 20) (ip-172-31-60-191.ec2.internal, executor 1, partition 0, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:05:11 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 21) (ip-172-31-58-48.ec2.internal, executor 3, partition 1, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:05:11 INFO TaskSetManager: Starting task 2.0 in stage 1.0 (TID 22) (ip-172-31-57-157.ec2.internal, executor 2, partition 2, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:05:11 INFO TaskSetManager: Starting task 3.0 in stage 1.0 (TID 23) (ip-172-31-60-191.ec2.internal, executor 1, partition 3, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:05:11 INFO TaskSetManager: Starting task 4.0 in stage 1.0 (TID 24) (ip-172-31-58-48.ec2.internal, executor 3, partition 4, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:05:11 INFO TaskSetManager: Starting task 5.0 in stage 1.0 (TID 25) (ip-172-31-57-157.ec2.internal, executor 2, partition 5, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:05:11 INFO TaskSetManager: Starting task 6.0 in stage 1.0 (TID 26) (ip-172-31-60-191.ec2.internal, executor 1, partition 6, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:05:11 INFO TaskSetManager: Starting task 7.0 in stage 1.0 (TID 27) (ip-172-31-58-48.ec2.internal, executor 3, partition 7, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:05:11 INFO TaskSetManager: Starting task 8.0 in stage 1.0 (TID 28) (ip-172-31-57-157.ec2.internal, executor 2, partition 8, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:05:11 INFO TaskSetManager: Starting task 9.0 in stage 1.0 (TID 29) (ip-172-31-60-191.ec2.internal, executor 1, partition 9, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:05:11 INFO TaskSetManager: Starting task 10.0 in stage 1.0 (TID 30) (ip-172-31-58-48.ec2.internal, executor 3, partition 10, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:05:11 INFO TaskSetManager: Starting task 11.0 in stage 1.0 (TID 31) (ip-172-31-57-157.ec2.internal, executor 2, partition 11, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:05:11 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 6.9 KiB, free: 4.8 GiB)
+21/10/22 14:05:11 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 6.9 KiB, free: 4.8 GiB)
+21/10/22 14:05:11 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 6.9 KiB, free: 4.8 GiB)
+21/10/22 14:05:11 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 509.9 KiB, free: 4.8 GiB)
+21/10/22 14:05:11 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 509.9 KiB, free: 4.8 GiB)
+21/10/22 14:05:11 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 509.9 KiB, free: 4.8 GiB)
+21/10/22 14:05:12 INFO YarnAllocator: Driver requested a total number of 4 executor(s) for resource profile id: 0.
+21/10/22 14:05:12 INFO YarnAllocator: Will request 1 executor container(s) for  ResourceProfile Id: 0, each with 4 core(s) and 11264 MB memory. with custom resources: <memory:11264, max memory:2147483647, vCores:4, max vCores:2147483647>
+21/10/22 14:05:12 INFO ExecutorAllocationManager: Requesting 4 new executors because tasks are backlogged (new desired total will be 4 for resource profile id: 0)
+21/10/22 14:05:12 INFO YarnAllocator: Submitted container request for host *.
+21/10/22 14:05:13 INFO YarnAllocator: Driver requested a total number of 5 executor(s) for resource profile id: 0.
+21/10/22 14:05:13 INFO ExecutorAllocationManager: Requesting 1 new executor because tasks are backlogged (new desired total will be 5 for resource profile id: 0)
+21/10/22 14:05:13 INFO YarnAllocator: Will request 1 executor container(s) for  ResourceProfile Id: 0, each with 4 core(s) and 11264 MB memory. with custom resources: <memory:11264, max memory:2147483647, vCores:4, max vCores:2147483647>
+21/10/22 14:05:13 INFO YarnAllocator: Submitted container request for host *.
+21/10/22 14:05:16 INFO TaskSetManager: Starting task 12.0 in stage 1.0 (TID 32) (ip-172-31-60-191.ec2.internal, executor 1, partition 12, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:05:16 INFO TaskSetManager: Finished task 3.0 in stage 1.0 (TID 23) in 5233 ms on ip-172-31-60-191.ec2.internal (executor 1) (1/20)
+21/10/22 14:05:16 INFO TaskSetManager: Starting task 13.0 in stage 1.0 (TID 33) (ip-172-31-57-157.ec2.internal, executor 2, partition 13, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:05:16 INFO TaskSetManager: Finished task 8.0 in stage 1.0 (TID 28) in 5376 ms on ip-172-31-57-157.ec2.internal (executor 2) (2/20)
+21/10/22 14:05:16 INFO TaskSetManager: Starting task 14.0 in stage 1.0 (TID 34) (ip-172-31-57-157.ec2.internal, executor 2, partition 14, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:05:16 INFO TaskSetManager: Finished task 5.0 in stage 1.0 (TID 25) in 5396 ms on ip-172-31-57-157.ec2.internal (executor 2) (3/20)
+21/10/22 14:05:16 INFO TaskSetManager: Starting task 15.0 in stage 1.0 (TID 35) (ip-172-31-58-48.ec2.internal, executor 3, partition 15, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:05:16 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 21) in 5455 ms on ip-172-31-58-48.ec2.internal (executor 3) (4/20)
+21/10/22 14:05:16 INFO TaskSetManager: Finished task 4.0 in stage 1.0 (TID 24) in 5481 ms on ip-172-31-58-48.ec2.internal (executor 3) (5/20)
+21/10/22 14:05:16 INFO TaskSetManager: Starting task 16.0 in stage 1.0 (TID 36) (ip-172-31-58-48.ec2.internal, executor 3, partition 16, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:05:16 INFO TaskSetManager: Starting task 17.0 in stage 1.0 (TID 37) (ip-172-31-58-48.ec2.internal, executor 3, partition 17, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:05:16 INFO TaskSetManager: Finished task 10.0 in stage 1.0 (TID 30) in 5494 ms on ip-172-31-58-48.ec2.internal (executor 3) (6/20)
+21/10/22 14:05:16 INFO YarnAllocator: Driver requested a total number of 4 executor(s) for resource profile id: 0.
+21/10/22 14:05:16 INFO YarnAllocator: Canceling requests for 1 executor container(s) to have a new desired total 4 executors.
+21/10/22 14:05:16 INFO TaskSetManager: Starting task 18.0 in stage 1.0 (TID 38) (ip-172-31-57-157.ec2.internal, executor 2, partition 18, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:05:16 INFO TaskSetManager: Finished task 2.0 in stage 1.0 (TID 22) in 5530 ms on ip-172-31-57-157.ec2.internal (executor 2) (7/20)
+21/10/22 14:05:16 INFO TaskSetManager: Starting task 19.0 in stage 1.0 (TID 39) (ip-172-31-60-191.ec2.internal, executor 1, partition 19, RACK_LOCAL, 4732 bytes) taskResourceAssignments Map()
+21/10/22 14:05:16 INFO TaskSetManager: Finished task 6.0 in stage 1.0 (TID 26) in 5600 ms on ip-172-31-60-191.ec2.internal (executor 1) (8/20)
+21/10/22 14:05:16 INFO TaskSetManager: Finished task 9.0 in stage 1.0 (TID 29) in 5604 ms on ip-172-31-60-191.ec2.internal (executor 1) (9/20)
+21/10/22 14:05:16 INFO YarnAllocator: Driver requested a total number of 3 executor(s) for resource profile id: 0.
+21/10/22 14:05:16 INFO YarnAllocator: Canceling requests for 1 executor container(s) to have a new desired total 3 executors.
+21/10/22 14:05:16 INFO TaskSetManager: Finished task 7.0 in stage 1.0 (TID 27) in 5780 ms on ip-172-31-58-48.ec2.internal (executor 3) (10/20)
+21/10/22 14:05:16 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 20) in 5818 ms on ip-172-31-60-191.ec2.internal (executor 1) (11/20)
+21/10/22 14:05:18 INFO TaskSetManager: Finished task 19.0 in stage 1.0 (TID 39) in 2033 ms on ip-172-31-60-191.ec2.internal (executor 1) (12/20)
+21/10/22 14:05:18 INFO YarnAllocator: Driver requested a total number of 2 executor(s) for resource profile id: 0.
+21/10/22 14:05:19 INFO TaskSetManager: Finished task 12.0 in stage 1.0 (TID 32) in 3080 ms on ip-172-31-60-191.ec2.internal (executor 1) (13/20)
+21/10/22 14:05:19 INFO TaskSetManager: Finished task 17.0 in stage 1.0 (TID 37) in 3375 ms on ip-172-31-58-48.ec2.internal (executor 3) (14/20)
+21/10/22 14:05:20 INFO TaskSetManager: Finished task 16.0 in stage 1.0 (TID 36) in 4206 ms on ip-172-31-58-48.ec2.internal (executor 3) (15/20)
+21/10/22 14:05:20 INFO TaskSetManager: Finished task 15.0 in stage 1.0 (TID 35) in 4244 ms on ip-172-31-58-48.ec2.internal (executor 3) (16/20)
+21/10/22 14:05:20 INFO YarnAllocator: Driver requested a total number of 1 executor(s) for resource profile id: 0.
+21/10/22 14:05:20 INFO BlockManagerInfo: Added taskresult_31 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 63.6 MiB, free: 4.7 GiB)
+21/10/22 14:05:20 INFO TransportClientFactory: Successfully created connection to ip-172-31-57-157.ec2.internal/172.31.57.157:45937 after 8 ms (0 ms spent in bootstraps)
+21/10/22 14:05:21 INFO TaskSetManager: Finished task 18.0 in stage 1.0 (TID 38) in 4920 ms on ip-172-31-57-157.ec2.internal (executor 2) (17/20)
+21/10/22 14:05:21 INFO TaskSetManager: Finished task 14.0 in stage 1.0 (TID 34) in 5294 ms on ip-172-31-57-157.ec2.internal (executor 2) (18/20)
+21/10/22 14:05:21 INFO TaskSetManager: Finished task 13.0 in stage 1.0 (TID 33) in 5429 ms on ip-172-31-57-157.ec2.internal (executor 2) (19/20)
+21/10/22 14:05:22 INFO TaskSetManager: Finished task 11.0 in stage 1.0 (TID 31) in 11061 ms on ip-172-31-57-157.ec2.internal (executor 2) (20/20)
+21/10/22 14:05:22 INFO YarnClusterScheduler: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+21/10/22 14:05:22 INFO DAGScheduler: ResultStage 1 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:266) finished in 11.080 s
+21/10/22 14:05:22 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+21/10/22 14:05:22 INFO YarnClusterScheduler: Killing all running tasks in stage 1: Stage finished
+21/10/22 14:05:22 INFO DAGScheduler: Job 1 finished: $anonfun$withThreadLocalCaptured$1 at FutureTask.java:266, took 11.089410 s
+21/10/22 14:05:22 INFO BlockManagerInfo: Removed taskresult_31 on ip-172-31-57-157.ec2.internal:45937 in memory (size: 63.6 MiB, free: 4.8 GiB)
+21/10/22 14:05:22 INFO YarnAllocator: Driver requested a total number of 0 executor(s) for resource profile id: 0.
+21/10/22 14:05:22 INFO BlockManagerInfo: Removed broadcast_3_piece0 on ip-172-31-58-33.ec2.internal:36251 in memory (size: 6.9 KiB, free: 1028.3 MiB)
+21/10/22 14:05:22 INFO BlockManagerInfo: Removed broadcast_3_piece0 on ip-172-31-58-48.ec2.internal:39727 in memory (size: 6.9 KiB, free: 4.8 GiB)
+21/10/22 14:05:22 INFO BlockManagerInfo: Removed broadcast_3_piece0 on ip-172-31-57-157.ec2.internal:45937 in memory (size: 6.9 KiB, free: 4.8 GiB)
+21/10/22 14:05:22 INFO BlockManagerInfo: Removed broadcast_3_piece0 on ip-172-31-60-191.ec2.internal:44191 in memory (size: 6.9 KiB, free: 4.8 GiB)
+21/10/22 14:05:22 INFO CodeGenerator: Code generated in 17.824124 ms
+21/10/22 14:05:28 INFO UnifiedMemoryManager: Will not store broadcast_4 as the required space (2289042068 bytes) exceeds our memory limit (1078827417 bytes)
+21/10/22 14:05:28 WARN MemoryStore: Not enough space to cache broadcast_4 in memory! (computed 1456.0 MiB so far)
+21/10/22 14:05:28 INFO MemoryStore: Memory use = 18.9 MiB (blocks) + 1024.0 KiB (scratch space shared across 1 tasks(s)) = 19.9 MiB. Storage limit = 1028.8 MiB.
+21/10/22 14:05:28 WARN BlockManager: Persisting block broadcast_4 to disk instead.
+21/10/22 14:05:32 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 4.0 MiB, free 1006.0 MiB)
+21/10/22 14:05:32 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 1024.3 MiB)
+21/10/22 14:05:32 INFO MemoryStore: Block broadcast_4_piece1 stored as bytes in memory (estimated size 4.0 MiB, free 1002.0 MiB)
+21/10/22 14:05:32 INFO BlockManagerInfo: Added broadcast_4_piece1 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 1020.3 MiB)
+21/10/22 14:05:32 INFO MemoryStore: Block broadcast_4_piece2 stored as bytes in memory (estimated size 4.0 MiB, free 998.0 MiB)
+21/10/22 14:05:32 INFO BlockManagerInfo: Added broadcast_4_piece2 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 1016.3 MiB)
+21/10/22 14:05:32 INFO MemoryStore: Block broadcast_4_piece3 stored as bytes in memory (estimated size 4.0 MiB, free 994.0 MiB)
+21/10/22 14:05:32 INFO BlockManagerInfo: Added broadcast_4_piece3 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 1012.3 MiB)
+21/10/22 14:05:32 INFO MemoryStore: Block broadcast_4_piece4 stored as bytes in memory (estimated size 4.0 MiB, free 990.0 MiB)
+21/10/22 14:05:32 INFO BlockManagerInfo: Added broadcast_4_piece4 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 1008.3 MiB)
+21/10/22 14:05:32 INFO MemoryStore: Block broadcast_4_piece5 stored as bytes in memory (estimated size 4.0 MiB, free 986.0 MiB)
+21/10/22 14:05:32 INFO BlockManagerInfo: Added broadcast_4_piece5 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 1004.3 MiB)
+21/10/22 14:05:32 INFO MemoryStore: Block broadcast_4_piece6 stored as bytes in memory (estimated size 4.0 MiB, free 982.0 MiB)
+21/10/22 14:05:32 INFO BlockManagerInfo: Added broadcast_4_piece6 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 1000.3 MiB)
+21/10/22 14:05:32 INFO MemoryStore: Block broadcast_4_piece7 stored as bytes in memory (estimated size 4.0 MiB, free 978.0 MiB)
+21/10/22 14:05:32 INFO BlockManagerInfo: Added broadcast_4_piece7 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 996.3 MiB)
+21/10/22 14:05:32 INFO MemoryStore: Block broadcast_4_piece8 stored as bytes in memory (estimated size 4.0 MiB, free 974.0 MiB)
+21/10/22 14:05:32 INFO BlockManagerInfo: Added broadcast_4_piece8 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 992.3 MiB)
+21/10/22 14:05:32 INFO MemoryStore: Block broadcast_4_piece9 stored as bytes in memory (estimated size 4.0 MiB, free 970.0 MiB)
+21/10/22 14:05:32 INFO BlockManagerInfo: Added broadcast_4_piece9 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 988.3 MiB)
+21/10/22 14:05:32 INFO MemoryStore: Block broadcast_4_piece10 stored as bytes in memory (estimated size 4.0 MiB, free 966.0 MiB)
+21/10/22 14:05:32 INFO BlockManagerInfo: Added broadcast_4_piece10 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 984.3 MiB)
+21/10/22 14:05:32 INFO MemoryStore: Block broadcast_4_piece11 stored as bytes in memory (estimated size 4.0 MiB, free 962.0 MiB)
+21/10/22 14:05:32 INFO BlockManagerInfo: Added broadcast_4_piece11 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 980.3 MiB)
+21/10/22 14:05:32 INFO MemoryStore: Block broadcast_4_piece12 stored as bytes in memory (estimated size 4.0 MiB, free 958.0 MiB)
+21/10/22 14:05:32 INFO BlockManagerInfo: Added broadcast_4_piece12 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 976.3 MiB)
+21/10/22 14:05:33 INFO MemoryStore: Block broadcast_4_piece13 stored as bytes in memory (estimated size 4.0 MiB, free 954.0 MiB)
+21/10/22 14:05:33 INFO BlockManagerInfo: Added broadcast_4_piece13 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 972.3 MiB)
+21/10/22 14:05:33 INFO MemoryStore: Block broadcast_4_piece14 stored as bytes in memory (estimated size 4.0 MiB, free 950.0 MiB)
+21/10/22 14:05:33 INFO BlockManagerInfo: Added broadcast_4_piece14 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 968.3 MiB)
+21/10/22 14:05:33 INFO MemoryStore: Block broadcast_4_piece15 stored as bytes in memory (estimated size 4.0 MiB, free 946.0 MiB)
+21/10/22 14:05:33 INFO BlockManagerInfo: Added broadcast_4_piece15 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 964.3 MiB)
+21/10/22 14:05:33 INFO MemoryStore: Block broadcast_4_piece16 stored as bytes in memory (estimated size 4.0 MiB, free 942.0 MiB)
+21/10/22 14:05:33 INFO BlockManagerInfo: Added broadcast_4_piece16 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 960.3 MiB)
+21/10/22 14:05:33 INFO MemoryStore: Block broadcast_4_piece17 stored as bytes in memory (estimated size 4.0 MiB, free 938.0 MiB)
+21/10/22 14:05:33 INFO BlockManagerInfo: Added broadcast_4_piece17 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 956.3 MiB)
+21/10/22 14:05:33 INFO MemoryStore: Block broadcast_4_piece18 stored as bytes in memory (estimated size 4.0 MiB, free 934.0 MiB)
+21/10/22 14:05:33 INFO BlockManagerInfo: Added broadcast_4_piece18 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 952.3 MiB)
+21/10/22 14:05:33 INFO MemoryStore: Block broadcast_4_piece19 stored as bytes in memory (estimated size 4.0 MiB, free 930.0 MiB)
+21/10/22 14:05:33 INFO BlockManagerInfo: Added broadcast_4_piece19 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 948.3 MiB)
+21/10/22 14:05:33 INFO MemoryStore: Block broadcast_4_piece20 stored as bytes in memory (estimated size 4.0 MiB, free 926.0 MiB)
+21/10/22 14:05:33 INFO BlockManagerInfo: Added broadcast_4_piece20 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 944.3 MiB)
+21/10/22 14:05:33 INFO MemoryStore: Block broadcast_4_piece21 stored as bytes in memory (estimated size 4.0 MiB, free 922.0 MiB)
+21/10/22 14:05:33 INFO BlockManagerInfo: Added broadcast_4_piece21 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 940.3 MiB)
+21/10/22 14:05:33 INFO MemoryStore: Block broadcast_4_piece22 stored as bytes in memory (estimated size 4.0 MiB, free 918.0 MiB)
+21/10/22 14:05:33 INFO BlockManagerInfo: Added broadcast_4_piece22 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 936.3 MiB)
+21/10/22 14:05:33 INFO MemoryStore: Block broadcast_4_piece23 stored as bytes in memory (estimated size 4.0 MiB, free 914.0 MiB)
+21/10/22 14:05:33 INFO BlockManagerInfo: Added broadcast_4_piece23 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 932.3 MiB)
+21/10/22 14:05:33 INFO MemoryStore: Block broadcast_4_piece24 stored as bytes in memory (estimated size 4.0 MiB, free 910.0 MiB)
+21/10/22 14:05:33 INFO BlockManagerInfo: Added broadcast_4_piece24 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 928.3 MiB)
+21/10/22 14:05:33 INFO MemoryStore: Block broadcast_4_piece25 stored as bytes in memory (estimated size 4.0 MiB, free 906.0 MiB)
+21/10/22 14:05:33 INFO BlockManagerInfo: Added broadcast_4_piece25 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 924.3 MiB)
+21/10/22 14:05:33 INFO MemoryStore: Block broadcast_4_piece26 stored as bytes in memory (estimated size 4.0 MiB, free 902.0 MiB)
+21/10/22 14:05:33 INFO BlockManagerInfo: Added broadcast_4_piece26 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 920.3 MiB)
+21/10/22 14:05:33 INFO MemoryStore: Block broadcast_4_piece27 stored as bytes in memory (estimated size 4.0 MiB, free 898.0 MiB)
+21/10/22 14:05:33 INFO BlockManagerInfo: Added broadcast_4_piece27 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 916.3 MiB)
+21/10/22 14:05:33 INFO MemoryStore: Block broadcast_4_piece28 stored as bytes in memory (estimated size 4.0 MiB, free 894.0 MiB)
+21/10/22 14:05:33 INFO BlockManagerInfo: Added broadcast_4_piece28 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 912.3 MiB)
+21/10/22 14:05:33 INFO MemoryStore: Block broadcast_4_piece29 stored as bytes in memory (estimated size 4.0 MiB, free 890.0 MiB)
+21/10/22 14:05:33 INFO BlockManagerInfo: Added broadcast_4_piece29 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 908.3 MiB)
+21/10/22 14:05:33 INFO MemoryStore: Block broadcast_4_piece30 stored as bytes in memory (estimated size 4.0 MiB, free 886.0 MiB)
+21/10/22 14:05:33 INFO BlockManagerInfo: Added broadcast_4_piece30 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 904.3 MiB)
+21/10/22 14:05:33 INFO MemoryStore: Block broadcast_4_piece31 stored as bytes in memory (estimated size 4.0 MiB, free 882.0 MiB)
+21/10/22 14:05:33 INFO BlockManagerInfo: Added broadcast_4_piece31 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 900.3 MiB)
+21/10/22 14:05:33 INFO MemoryStore: Block broadcast_4_piece32 stored as bytes in memory (estimated size 4.0 MiB, free 878.0 MiB)
+21/10/22 14:05:33 INFO BlockManagerInfo: Added broadcast_4_piece32 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 896.3 MiB)
+21/10/22 14:05:33 INFO MemoryStore: Block broadcast_4_piece33 stored as bytes in memory (estimated size 4.0 MiB, free 874.0 MiB)
+21/10/22 14:05:33 INFO BlockManagerInfo: Added broadcast_4_piece33 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 892.3 MiB)
+21/10/22 14:05:33 INFO MemoryStore: Block broadcast_4_piece34 stored as bytes in memory (estimated size 4.0 MiB, free 870.0 MiB)
+21/10/22 14:05:33 INFO BlockManagerInfo: Added broadcast_4_piece34 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 888.3 MiB)
+21/10/22 14:05:33 INFO MemoryStore: Block broadcast_4_piece35 stored as bytes in memory (estimated size 4.0 MiB, free 866.0 MiB)
+21/10/22 14:05:33 INFO BlockManagerInfo: Added broadcast_4_piece35 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 884.3 MiB)
+21/10/22 14:05:33 INFO MemoryStore: Block broadcast_4_piece36 stored as bytes in memory (estimated size 4.0 MiB, free 862.0 MiB)
+21/10/22 14:05:33 INFO BlockManagerInfo: Added broadcast_4_piece36 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 880.3 MiB)
+21/10/22 14:05:33 INFO MemoryStore: Block broadcast_4_piece37 stored as bytes in memory (estimated size 4.0 MiB, free 858.0 MiB)
+21/10/22 14:05:33 INFO BlockManagerInfo: Added broadcast_4_piece37 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 876.3 MiB)
+21/10/22 14:05:33 INFO MemoryStore: Block broadcast_4_piece38 stored as bytes in memory (estimated size 4.0 MiB, free 854.0 MiB)
+21/10/22 14:05:33 INFO BlockManagerInfo: Added broadcast_4_piece38 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 872.3 MiB)
+21/10/22 14:05:33 INFO MemoryStore: Block broadcast_4_piece39 stored as bytes in memory (estimated size 4.0 MiB, free 850.0 MiB)
+21/10/22 14:05:33 INFO BlockManagerInfo: Added broadcast_4_piece39 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 868.3 MiB)
+21/10/22 14:05:33 INFO MemoryStore: Block broadcast_4_piece40 stored as bytes in memory (estimated size 4.0 MiB, free 846.0 MiB)
+21/10/22 14:05:33 INFO BlockManagerInfo: Added broadcast_4_piece40 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 864.3 MiB)
+21/10/22 14:05:33 INFO MemoryStore: Block broadcast_4_piece41 stored as bytes in memory (estimated size 4.0 MiB, free 842.0 MiB)
+21/10/22 14:05:33 INFO BlockManagerInfo: Added broadcast_4_piece41 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 860.3 MiB)
+21/10/22 14:05:33 INFO MemoryStore: Block broadcast_4_piece42 stored as bytes in memory (estimated size 4.0 MiB, free 838.0 MiB)
+21/10/22 14:05:33 INFO BlockManagerInfo: Added broadcast_4_piece42 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 856.3 MiB)
+21/10/22 14:05:33 INFO MemoryStore: Block broadcast_4_piece43 stored as bytes in memory (estimated size 4.0 MiB, free 834.0 MiB)
+21/10/22 14:05:33 INFO BlockManagerInfo: Added broadcast_4_piece43 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 4.0 MiB, free: 852.3 MiB)
+21/10/22 14:05:33 INFO MemoryStore: Block broadcast_4_piece44 stored as bytes in memory (estimated size 2.4 MiB, free 831.6 MiB)
+21/10/22 14:05:33 INFO BlockManagerInfo: Added broadcast_4_piece44 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 2.4 MiB, free: 850.0 MiB)
+21/10/22 14:05:33 INFO SparkContext: Created broadcast 4 from $anonfun$withThreadLocalCaptured$1 at FutureTask.java:266
+21/10/22 14:05:38 INFO UnifiedMemoryManager: Will not store broadcast_4 as the required space (1886388884 bytes) exceeds our memory limit (1078827417 bytes)
+21/10/22 14:05:38 WARN MemoryStore: Not enough space to cache broadcast_4 in memory! (computed 1200.0 MiB so far)
+21/10/22 14:05:38 INFO MemoryStore: Memory use = 197.2 MiB (blocks) + 1024.0 KiB (scratch space shared across 1 tasks(s)) = 198.2 MiB. Storage limit = 1028.8 MiB.
+21/10/22 14:05:38 INFO CodeGenerator: Code generated in 34.916065 ms
+21/10/22 14:05:38 INFO DAGScheduler: Registering RDD 13 (count at Rep-D.scala:51) as input to shuffle 0
+21/10/22 14:05:38 INFO DAGScheduler: Got map stage job 2 (count at Rep-D.scala:51) with 20 output partitions
+21/10/22 14:05:38 INFO DAGScheduler: Final stage: ShuffleMapStage 2 (count at Rep-D.scala:51)
+21/10/22 14:05:38 INFO DAGScheduler: Parents of final stage: List()
+21/10/22 14:05:38 INFO DAGScheduler: Missing parents: List()
+21/10/22 14:05:38 INFO DAGScheduler: Submitting ShuffleMapStage 2 (MapPartitionsRDD[13] at count at Rep-D.scala:51), which has no missing parents
+21/10/22 14:05:38 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 18.6 KiB, free 831.6 MiB)
+21/10/22 14:05:38 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 8.5 KiB, free 831.6 MiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 8.5 KiB, free: 849.9 MiB)
+21/10/22 14:05:38 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1484
+21/10/22 14:05:38 INFO DAGScheduler: Submitting 20 missing tasks from ShuffleMapStage 2 (MapPartitionsRDD[13] at count at Rep-D.scala:51) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+21/10/22 14:05:38 INFO YarnClusterScheduler: Adding task set 2.0 with 20 tasks resource profile 0
+21/10/22 14:05:38 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 40) (ip-172-31-57-157.ec2.internal, executor 2, partition 0, RACK_LOCAL, 4484 bytes) taskResourceAssignments Map()
+21/10/22 14:05:38 INFO TaskSetManager: Starting task 1.0 in stage 2.0 (TID 41) (ip-172-31-60-191.ec2.internal, executor 1, partition 1, RACK_LOCAL, 4484 bytes) taskResourceAssignments Map()
+21/10/22 14:05:38 INFO TaskSetManager: Starting task 2.0 in stage 2.0 (TID 42) (ip-172-31-58-48.ec2.internal, executor 3, partition 2, RACK_LOCAL, 4484 bytes) taskResourceAssignments Map()
+21/10/22 14:05:38 INFO TaskSetManager: Starting task 3.0 in stage 2.0 (TID 43) (ip-172-31-57-157.ec2.internal, executor 2, partition 3, RACK_LOCAL, 4484 bytes) taskResourceAssignments Map()
+21/10/22 14:05:38 INFO TaskSetManager: Starting task 4.0 in stage 2.0 (TID 44) (ip-172-31-60-191.ec2.internal, executor 1, partition 4, RACK_LOCAL, 4484 bytes) taskResourceAssignments Map()
+21/10/22 14:05:38 INFO TaskSetManager: Starting task 5.0 in stage 2.0 (TID 45) (ip-172-31-58-48.ec2.internal, executor 3, partition 5, RACK_LOCAL, 4484 bytes) taskResourceAssignments Map()
+21/10/22 14:05:38 INFO TaskSetManager: Starting task 6.0 in stage 2.0 (TID 46) (ip-172-31-57-157.ec2.internal, executor 2, partition 6, RACK_LOCAL, 4484 bytes) taskResourceAssignments Map()
+21/10/22 14:05:38 INFO TaskSetManager: Starting task 7.0 in stage 2.0 (TID 47) (ip-172-31-60-191.ec2.internal, executor 1, partition 7, RACK_LOCAL, 4484 bytes) taskResourceAssignments Map()
+21/10/22 14:05:38 INFO TaskSetManager: Starting task 8.0 in stage 2.0 (TID 48) (ip-172-31-58-48.ec2.internal, executor 3, partition 8, RACK_LOCAL, 4484 bytes) taskResourceAssignments Map()
+21/10/22 14:05:38 INFO TaskSetManager: Starting task 9.0 in stage 2.0 (TID 49) (ip-172-31-57-157.ec2.internal, executor 2, partition 9, RACK_LOCAL, 4484 bytes) taskResourceAssignments Map()
+21/10/22 14:05:38 INFO TaskSetManager: Starting task 10.0 in stage 2.0 (TID 50) (ip-172-31-60-191.ec2.internal, executor 1, partition 10, RACK_LOCAL, 4484 bytes) taskResourceAssignments Map()
+21/10/22 14:05:38 INFO TaskSetManager: Starting task 11.0 in stage 2.0 (TID 51) (ip-172-31-58-48.ec2.internal, executor 3, partition 11, RACK_LOCAL, 4484 bytes) taskResourceAssignments Map()
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 8.5 KiB, free: 4.8 GiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 8.5 KiB, free: 4.8 GiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 8.5 KiB, free: 4.8 GiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_4_piece42 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.8 GiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_4_piece16 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.8 GiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_4_piece5 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.8 GiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_4_piece37 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.8 GiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_4_piece32 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.8 GiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_4_piece24 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.8 GiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_4_piece41 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.8 GiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_4_piece44 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 2.4 MiB, free: 4.8 GiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_4_piece27 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.8 GiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_4_piece8 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.8 GiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_4_piece4 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_4_piece9 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_4_piece36 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_4_piece36 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_4_piece14 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_4_piece26 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_4_piece17 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_4_piece6 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_4_piece19 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_4_piece10 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_4_piece34 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_4_piece18 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_4_piece43 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_4_piece39 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_4_piece11 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_4_piece38 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_4_piece11 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_4_piece31 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_4_piece23 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_4_piece11 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:38 INFO BlockManagerInfo: Added broadcast_4_piece8 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece8 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece12 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece17 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece42 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece20 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece21 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece26 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece34 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece40 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece2 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece2 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece38 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece38 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece15 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO YarnAllocator: Driver requested a total number of 4 executor(s) for resource profile id: 0.
+21/10/22 14:05:39 INFO ExecutorAllocationManager: Requesting 4 new executors because tasks are backlogged (new desired total will be 4 for resource profile id: 0)
+21/10/22 14:05:39 INFO YarnAllocator: Will request 1 executor container(s) for  ResourceProfile Id: 0, each with 4 core(s) and 11264 MB memory. with custom resources: <memory:11264, max memory:2147483647, vCores:4, max vCores:2147483647>
+21/10/22 14:05:39 INFO YarnAllocator: Submitted container request for host *.
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece43 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece16 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece20 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece24 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece41 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece19 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece29 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece35 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece10 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece21 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece3 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece30 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece19 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece30 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece15 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece44 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 2.4 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece35 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece12 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece32 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece2 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece36 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece3 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece25 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece44 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 2.4 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece1 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:39 INFO BlockManagerInfo: Added broadcast_4_piece21 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece37 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece3 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece20 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece7 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece13 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece28 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece27 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece23 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:40 INFO YarnAllocator: Driver requested a total number of 5 executor(s) for resource profile id: 0.
+21/10/22 14:05:40 INFO ExecutorAllocationManager: Requesting 1 new executor because tasks are backlogged (new desired total will be 5 for resource profile id: 0)
+21/10/22 14:05:40 INFO YarnAllocator: Will request 1 executor container(s) for  ResourceProfile Id: 0, each with 4 core(s) and 11264 MB memory. with custom resources: <memory:11264, max memory:2147483647, vCores:4, max vCores:2147483647>
+21/10/22 14:05:40 INFO YarnAllocator: Submitted container request for host *.
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece28 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece33 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece6 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece6 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece35 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece27 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece18 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece41 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece1 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece42 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece37 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.7 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece7 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece9 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece31 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece10 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece22 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece43 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece22 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece23 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece30 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece39 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece31 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece5 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece16 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece13 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece25 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece33 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece4 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece40 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:40 INFO BlockManagerInfo: Added broadcast_4_piece29 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:41 INFO BlockManagerInfo: Added broadcast_4_piece14 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:41 INFO BlockManagerInfo: Added broadcast_4_piece33 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:41 INFO BlockManagerInfo: Added broadcast_4_piece39 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:41 INFO BlockManagerInfo: Added broadcast_4_piece12 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:41 INFO BlockManagerInfo: Added broadcast_4_piece40 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:41 INFO BlockManagerInfo: Added broadcast_4_piece24 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:41 INFO BlockManagerInfo: Added broadcast_4_piece34 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:41 INFO BlockManagerInfo: Added broadcast_4_piece26 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:41 INFO BlockManagerInfo: Added broadcast_4_piece22 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:41 INFO BlockManagerInfo: Added broadcast_4_piece15 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:41 INFO BlockManagerInfo: Added broadcast_4_piece32 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:41 INFO BlockManagerInfo: Added broadcast_4_piece4 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:41 INFO BlockManagerInfo: Added broadcast_4_piece1 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:41 INFO BlockManagerInfo: Added broadcast_4_piece29 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:41 INFO BlockManagerInfo: Added broadcast_4_piece25 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:41 INFO BlockManagerInfo: Added broadcast_4_piece5 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:41 INFO BlockManagerInfo: Added broadcast_4_piece14 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:41 INFO BlockManagerInfo: Added broadcast_4_piece28 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:41 INFO BlockManagerInfo: Added broadcast_4_piece7 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:41 INFO BlockManagerInfo: Added broadcast_4_piece17 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:41 INFO BlockManagerInfo: Added broadcast_4_piece13 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:41 INFO BlockManagerInfo: Added broadcast_4_piece18 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:41 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on ip-172-31-60-191.ec2.internal:44191 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:41 INFO BlockManagerInfo: Added broadcast_4_piece9 in memory on ip-172-31-58-48.ec2.internal:39727 (size: 4.0 MiB, free: 4.6 GiB)
+21/10/22 14:05:51 INFO TaskSetManager: Starting task 12.0 in stage 2.0 (TID 52) (ip-172-31-58-48.ec2.internal, executor 3, partition 12, RACK_LOCAL, 4484 bytes) taskResourceAssignments Map()
+21/10/22 14:05:51 INFO TaskSetManager: Finished task 8.0 in stage 2.0 (TID 48) in 13497 ms on ip-172-31-58-48.ec2.internal (executor 3) (1/20)
+21/10/22 14:05:51 INFO TaskSetManager: Starting task 13.0 in stage 2.0 (TID 53) (ip-172-31-58-48.ec2.internal, executor 3, partition 13, RACK_LOCAL, 4484 bytes) taskResourceAssignments Map()
+21/10/22 14:05:51 INFO TaskSetManager: Finished task 5.0 in stage 2.0 (TID 45) in 13577 ms on ip-172-31-58-48.ec2.internal (executor 3) (2/20)
+21/10/22 14:05:52 INFO TaskSetManager: Starting task 14.0 in stage 2.0 (TID 54) (ip-172-31-57-157.ec2.internal, executor 2, partition 14, RACK_LOCAL, 4484 bytes) taskResourceAssignments Map()
+21/10/22 14:05:52 INFO TaskSetManager: Finished task 3.0 in stage 2.0 (TID 43) in 13787 ms on ip-172-31-57-157.ec2.internal (executor 2) (3/20)
+21/10/22 14:05:52 INFO TaskSetManager: Starting task 15.0 in stage 2.0 (TID 55) (ip-172-31-57-157.ec2.internal, executor 2, partition 15, RACK_LOCAL, 4484 bytes) taskResourceAssignments Map()
+21/10/22 14:05:52 INFO TaskSetManager: Finished task 6.0 in stage 2.0 (TID 46) in 13791 ms on ip-172-31-57-157.ec2.internal (executor 2) (4/20)
+21/10/22 14:05:52 INFO YarnAllocator: Driver requested a total number of 4 executor(s) for resource profile id: 0.
+21/10/22 14:05:52 INFO YarnAllocator: Canceling requests for 1 executor container(s) to have a new desired total 4 executors.
+21/10/22 14:05:52 INFO TaskSetManager: Starting task 16.0 in stage 2.0 (TID 56) (ip-172-31-57-157.ec2.internal, executor 2, partition 16, RACK_LOCAL, 4484 bytes) taskResourceAssignments Map()
+21/10/22 14:05:52 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 40) in 14021 ms on ip-172-31-57-157.ec2.internal (executor 2) (5/20)
+21/10/22 14:05:52 INFO TaskSetManager: Starting task 17.0 in stage 2.0 (TID 57) (ip-172-31-58-48.ec2.internal, executor 3, partition 17, RACK_LOCAL, 4484 bytes) taskResourceAssignments Map()
+21/10/22 14:05:52 INFO TaskSetManager: Finished task 2.0 in stage 2.0 (TID 42) in 14108 ms on ip-172-31-58-48.ec2.internal (executor 3) (6/20)
+21/10/22 14:05:52 INFO TaskSetManager: Starting task 18.0 in stage 2.0 (TID 58) (ip-172-31-57-157.ec2.internal, executor 2, partition 18, RACK_LOCAL, 4484 bytes) taskResourceAssignments Map()
+21/10/22 14:05:52 INFO TaskSetManager: Finished task 9.0 in stage 2.0 (TID 49) in 14131 ms on ip-172-31-57-157.ec2.internal (executor 2) (7/20)
+21/10/22 14:05:52 INFO TaskSetManager: Starting task 19.0 in stage 2.0 (TID 59) (ip-172-31-60-191.ec2.internal, executor 1, partition 19, RACK_LOCAL, 4484 bytes) taskResourceAssignments Map()
+21/10/22 14:05:52 INFO TaskSetManager: Finished task 4.0 in stage 2.0 (TID 44) in 14261 ms on ip-172-31-60-191.ec2.internal (executor 1) (8/20)
+21/10/22 14:05:52 INFO TaskSetManager: Finished task 7.0 in stage 2.0 (TID 47) in 14266 ms on ip-172-31-60-191.ec2.internal (executor 1) (9/20)
+21/10/22 14:05:52 INFO TaskSetManager: Finished task 10.0 in stage 2.0 (TID 50) in 14284 ms on ip-172-31-60-191.ec2.internal (executor 1) (10/20)
+21/10/22 14:05:52 INFO YarnAllocator: Driver requested a total number of 3 executor(s) for resource profile id: 0.
+21/10/22 14:05:52 INFO YarnAllocator: Canceling requests for 1 executor container(s) to have a new desired total 3 executors.
+21/10/22 14:05:52 INFO TaskSetManager: Finished task 11.0 in stage 2.0 (TID 51) in 14314 ms on ip-172-31-58-48.ec2.internal (executor 3) (11/20)
+21/10/22 14:05:52 INFO TaskSetManager: Finished task 1.0 in stage 2.0 (TID 41) in 14386 ms on ip-172-31-60-191.ec2.internal (executor 1) (12/20)
+21/10/22 14:05:52 INFO YarnAllocator: Driver requested a total number of 2 executor(s) for resource profile id: 0.
+21/10/22 14:05:54 INFO TaskSetManager: Finished task 19.0 in stage 2.0 (TID 59) in 1882 ms on ip-172-31-60-191.ec2.internal (executor 1) (13/20)
+21/10/22 14:05:56 INFO TaskSetManager: Finished task 12.0 in stage 2.0 (TID 52) in 4331 ms on ip-172-31-58-48.ec2.internal (executor 3) (14/20)
+21/10/22 14:05:56 INFO TaskSetManager: Finished task 13.0 in stage 2.0 (TID 53) in 4491 ms on ip-172-31-58-48.ec2.internal (executor 3) (15/20)
+21/10/22 14:05:56 INFO TaskSetManager: Finished task 17.0 in stage 2.0 (TID 57) in 4042 ms on ip-172-31-58-48.ec2.internal (executor 3) (16/20)
+21/10/22 14:05:56 INFO YarnAllocator: Driver requested a total number of 1 executor(s) for resource profile id: 0.
+21/10/22 14:05:57 INFO TaskSetManager: Finished task 15.0 in stage 2.0 (TID 55) in 5097 ms on ip-172-31-57-157.ec2.internal (executor 2) (17/20)
+21/10/22 14:05:57 INFO TaskSetManager: Finished task 14.0 in stage 2.0 (TID 54) in 5206 ms on ip-172-31-57-157.ec2.internal (executor 2) (18/20)
+21/10/22 14:05:57 INFO TaskSetManager: Finished task 16.0 in stage 2.0 (TID 56) in 4995 ms on ip-172-31-57-157.ec2.internal (executor 2) (19/20)
+21/10/22 14:05:57 INFO TaskSetManager: Finished task 18.0 in stage 2.0 (TID 58) in 5212 ms on ip-172-31-57-157.ec2.internal (executor 2) (20/20)
+21/10/22 14:05:57 INFO YarnClusterScheduler: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+21/10/22 14:05:57 INFO DAGScheduler: ShuffleMapStage 2 (count at Rep-D.scala:51) finished in 19.378 s
+21/10/22 14:05:57 INFO DAGScheduler: looking for newly runnable stages
+21/10/22 14:05:57 INFO DAGScheduler: running: Set()
+21/10/22 14:05:57 INFO DAGScheduler: waiting: Set()
+21/10/22 14:05:57 INFO DAGScheduler: failed: Set()
+21/10/22 14:05:57 INFO YarnAllocator: Driver requested a total number of 0 executor(s) for resource profile id: 0.
+21/10/22 14:05:57 INFO CodeGenerator: Code generated in 13.205068 ms
+21/10/22 14:05:57 INFO SparkContext: Starting job: count at Rep-D.scala:51
+21/10/22 14:05:57 INFO DAGScheduler: Got job 3 (count at Rep-D.scala:51) with 1 output partitions
+21/10/22 14:05:57 INFO DAGScheduler: Final stage: ResultStage 4 (count at Rep-D.scala:51)
+21/10/22 14:05:57 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 3)
+21/10/22 14:05:57 INFO DAGScheduler: Missing parents: List()
+21/10/22 14:05:57 INFO DAGScheduler: Submitting ResultStage 4 (MapPartitionsRDD[16] at count at Rep-D.scala:51), which has no missing parents
+21/10/22 14:05:57 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 10.5 KiB, free 831.6 MiB)
+21/10/22 14:05:57 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 5.3 KiB, free 831.6 MiB)
+21/10/22 14:05:57 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on ip-172-31-58-33.ec2.internal:36251 (size: 5.3 KiB, free: 849.9 MiB)
+21/10/22 14:05:57 INFO SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:1484
+21/10/22 14:05:57 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 4 (MapPartitionsRDD[16] at count at Rep-D.scala:51) (first 15 tasks are for partitions Vector(0))
+21/10/22 14:05:57 INFO YarnClusterScheduler: Adding task set 4.0 with 1 tasks resource profile 0
+21/10/22 14:05:57 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 60) (ip-172-31-57-157.ec2.internal, executor 2, partition 0, NODE_LOCAL, 4782 bytes) taskResourceAssignments Map()
+21/10/22 14:05:57 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on ip-172-31-57-157.ec2.internal:45937 (size: 5.3 KiB, free: 4.6 GiB)
+21/10/22 14:05:57 INFO MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 172.31.57.157:52478
+21/10/22 14:05:57 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 60) in 180 ms on ip-172-31-57-157.ec2.internal (executor 2) (1/1)
+21/10/22 14:05:57 INFO YarnClusterScheduler: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+21/10/22 14:05:57 INFO DAGScheduler: ResultStage 4 (count at Rep-D.scala:51) finished in 0.187 s
+21/10/22 14:05:57 INFO DAGScheduler: Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+21/10/22 14:05:57 INFO YarnClusterScheduler: Killing all running tasks in stage 4: Stage finished
+21/10/22 14:05:57 INFO DAGScheduler: Job 3 finished: count at Rep-D.scala:51, took 0.201856 s
+21/10/22 14:05:57 INFO root: -------------------------------------------
+21/10/22 14:05:57 INFO root: closing edge count: 394962
+21/10/22 14:05:57 INFO root: triangle count: 131654
+21/10/22 14:05:57 INFO root: -------------------------------------------
+21/10/22 14:05:57 INFO ApplicationMaster: Final app status: SUCCEEDED, exitCode: 0
+21/10/22 14:05:57 INFO SparkContext: Invoking stop() from shutdown hook
+21/10/22 14:05:57 INFO AbstractConnector: Stopped Spark@1b670a03{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+21/10/22 14:05:57 INFO SparkUI: Stopped Spark web UI at http://ip-172-31-58-33.ec2.internal:34525
+21/10/22 14:05:57 INFO YarnClusterSchedulerBackend: Shutting down all executors
+21/10/22 14:05:57 INFO YarnSchedulerBackend$YarnDriverEndpoint: Asking each executor to shut down
+21/10/22 14:05:58 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+21/10/22 14:05:58 INFO MemoryStore: MemoryStore cleared
+21/10/22 14:05:58 INFO BlockManager: BlockManager stopped
+21/10/22 14:05:58 INFO BlockManagerMaster: BlockManagerMaster stopped
+21/10/22 14:05:58 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+21/10/22 14:05:58 INFO SparkContext: Successfully stopped SparkContext
+21/10/22 14:05:58 INFO ApplicationMaster: Unregistering ApplicationMaster with SUCCEEDED
+21/10/22 14:05:58 INFO AMRMClientImpl: Waiting for application to be successfully unregistered.
+21/10/22 14:05:58 INFO ApplicationMaster: Deleting staging directory hdfs://ip-172-31-52-49.ec2.internal:8020/user/hadoop/.sparkStaging/application_1634911319426_0001
+21/10/22 14:05:58 INFO ShutdownHookManager: Shutdown hook called
+21/10/22 14:05:58 INFO ShutdownHookManager: Deleting directory /mnt1/yarn/usercache/hadoop/appcache/application_1634911319426_0001/spark-57d5e5b5-7c70-4400-8522-866a1935854d
+21/10/22 14:05:58 INFO ShutdownHookManager: Deleting directory /mnt/yarn/usercache/hadoop/appcache/application_1634911319426_0001/spark-fff600cf-1367-4366-9126-e03eb1d50da5
